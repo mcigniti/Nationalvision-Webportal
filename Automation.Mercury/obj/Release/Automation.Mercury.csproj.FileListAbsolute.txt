@@ -1,0 +1,12 @@
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\bin\Release\Automation.Mercury.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\bin\Release\Automation.Mercury.pdb
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\bin\Release\Automation.Mercury.Report.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\bin\Release\Microsoft.Expression.Encoder.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\bin\Release\Selenium.WebDriverBackedSelenium.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\bin\Release\ThoughtWorks.Selenium.Core.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\bin\Release\WebDriver.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\bin\Release\WebDriver.Support.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\bin\Release\Automation.Mercury.Report.pdb
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\obj\Release\Automation.Mercury.csprojResolveAssemblyReference.cache
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\obj\Release\Automation.Mercury.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury\obj\Release\Automation.Mercury.pdb

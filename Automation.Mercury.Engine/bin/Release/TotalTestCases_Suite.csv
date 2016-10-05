@@ -1,0 +1,17 @@
+TestCaseID,Run,Browser,RequirementFeature,TestCaseTitle,Remarks
+TC_001_NVICorporateApplication,NO,FF,To Test NVI Corporate Application,,None
+TC_002_FirstSightCorporateApplication,NO,FF,To Test FirstSightCorporateApplication,,None
+TC_003_AmericasBestApplication,NO,FF,To Test AmericasBestApplication,,None
+TC_004_EyeglassWorldApplication,NO,FF,To Test EyeglassWorldApplication,,None
+TC_005_OpticalCenterOrMilitaryApplication,NO,FF,To Test OpticalCenterOrMilitaryApplication,,None
+TC_006_FredMeyerApplicationOrVistaApplication,NO,FF,To Test FredMeyerApplicationOrVistaApplication,,None
+TC_007_VisionCenterOrWalmartApplication,NO,FF,To Test VisionCenterOrWalmartApplication,,None
+TC_008_LABApplication,NO,FF,To Test LABApplication,,None
+TC_009_NVICorporateApplication,NO,FF,Verifying the functaionality of External Application in NVI Portal,,None
+TC_010_FirstSightCorporateApplication,NO,FF,Verifying the functaionality of External Application in First Sight Corporate Portal,,None
+TC_011_AmericasBestApplication,NO,FF,Verifying the functaionality of External Application in Americas Best Portal,,None
+TC_012_EyeglassWorldApplication,NO,FF,Verifying the functaionality of External Application in Eyeglass World Portal,,None
+TC_013_OpticalCenterOrMilitaryApplication,NO,FF,Verifying the functaionality of External Application in Optical Center Or Military Portal,,None
+TC_014_FredMeyerApplicationOrVistaApplication,NO,FF,Verifying the functaionality of External Application in Fred Meyer or Vista Portal,,None
+TC_015_VisionCenterOrWalmartApplication,NO,FF,Verifying the functaionality of External Application in Vision Center Or Walmart Portal,,None
+TC_016_LABApplication,NO,YES,Verifying the functaionality of External Application in LAB Portal,,None

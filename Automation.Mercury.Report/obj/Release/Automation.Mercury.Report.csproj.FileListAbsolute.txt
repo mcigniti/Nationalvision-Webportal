@@ -1,0 +1,6 @@
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury.Report\bin\Release\Automation.Mercury.Report.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury.Report\bin\Release\Automation.Mercury.Report.pdb
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury.Report\bin\Release\Microsoft.Expression.Encoder.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury.Report\obj\Release\Automation.Mercury.Report.csprojResolveAssemblyReference.cache
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury.Report\obj\Release\Automation.Mercury.Report.dll
+C:\Users\E002034\Desktop\01082016 - Copy\Automation.Mercury.Report\obj\Release\Automation.Mercury.Report.pdb

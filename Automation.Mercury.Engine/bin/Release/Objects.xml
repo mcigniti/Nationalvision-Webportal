@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<PageFactory>
+
+  <page title ="Home Page">
+
+   <object>
+      <name>MenuGrid_lbl</name>
+      <identifyBy>xpath</identifyBy>
+      <value>//div[@class='menu']/ul/li</value>
+   </object>
+    
+    <object>
+      <name>ApplicationLogo_Img</name>
+      <identifyBy>xpath</identifyBy>
+      <value>//img[@title='Select Portal']</value>
+    </object>    
+	<object>
+      <name>MenuName_lbl</name>
+      <identifyBy>xpath</identifyBy>
+      <value>//div[@class='menu']/ul/li[{0}]</value>
+   </object>
+
+   <object>
+      <name>MenuName_menu</name>
+      <identifyBy>xpath</identifyBy>
+      <value>//div[@class='menu']/ul/li/a[contains(text(),'{0}')]</value>
+    </object>
+
+   <object>
+      <name>ExternalApplicationOrMenuInContent_menu</name>
+      <identifyBy>xpath</identifyBy>
+      <value>//div[@class='secmenu']/ul/li/a</value>
+    </object> 
+    
+  </page>
+
+  <page title ="This is Login Page">
+   
+   <object>
+      <name>UserName_txt</name>
+      <identifyBy>id</identifyBy>
+      <value>txtUserName</value>
+    </object>
+
+   <object>
+     <name>Password_txt</name>
+     <identifyBy>id</identifyBy>
+     <value>txtPassword</value>
+   </object>
+
+   <object>
+     <name>Portal_Logo</name>
+     <identifyBy>xpath</identifyBy>
+     <value>//div[@id='updPanelMain']/descendant::img[@alt='Portal']</value>
+   </object>
+   
+   <object>
+     <name>Spinner1_img</name>
+     <identifyBy>xpath</identifyBy>
+     <value>//div[@class='dlg_spinner']</value>
+   </object>
+
+    <object>
+      <name>Spinner2_img</name>
+      <identifyBy>xpath</identifyBy>
+      <value>//img[@id='tblProgress']</value>
+    </object>
+
+   <object>
+     <name>Login_btn</name>
+     <identifyBy>xpath</identifyBy>
+     <value>//a[@class='button']/span[text()='Login']</value>
+   </object>
+   
+   <object> 
+     <name>Corporateportal_lnk</name> 
+     <identifyBy>xpath</identifyBy> 
+     <value>//table[@class='wide100']/descendant::div[@id='bannernav']/descendant::a</value> 
+   </object>
+   
+   <object> 
+    <name>CostCenter_txt</name> 
+    <identifyBy>xpath</identifyBy> 
+    <value>//input[@name='txtCostCenterNumber']</value> 
+   </object>
+   
+   <object> 
+    <name>AccountingSearch_btn</name> 
+    <identifyBy>id</identifyBy> 
+    <value>cmdSearch2</value> 
+   </object>
+
+   <object>
+     <name>Clear_btn</name>
+     <identifyBy>id</identifyBy>
+     <value>ucSearchHistory_dClear</value>
+   </object>
+
+   <object>
+     <name>CostCenterResult_lnk</name>
+     <identifyBy>xpath</identifyBy>
+     <value>//tr[@class='GridRow_altN_selN_hovN']/td[2]/a[text()='{0}']</value>
+   </object>
+
+   <object>
+     <name>AboutNationalVisionDownload_lnk</name>
+     <identifyBy>xpath</identifyBy>
+     <value>//tr[@class='rowsimple']/descendant::a</value>
+   </object>
+
+   <object>
+     <name>AboutNationalVisionFrame</name>
+     <identifyBy>xpath</identifyBy>
+     <value>//td[@class='center']/div[@id='updPanelMenu']/following-sibling::iframe</value>
+   </object>
+
+   <object>
+     <name>NVDocument_lnk</name>
+     <identifyBy>xpath</identifyBy>
+     <value>//table[@class='NO_BORDERS wide100']/descendant::tbody/tr[2]/td[2]/a[@title='Open the document']</value>
+   </object>
+
+   <object>
+     <name>VerifyAboutNVDocument_lnk</name>
+     <identifyBy>xpath</identifyBy>
+     <value>//div[@id='bannerImage']/a/img</value>
+   </object>
+
+   <object>
+     <name>CommunicationFrame</name>
+     <identifyBy>xpath</identifyBy>
+     <value>//table[@class='boxview']/descendant::td/descendant::iframe[@id='iFrameSiteContents']</value>
+   </object>
+
+   <object>
+     <name>CommunicationDocument_lnk</name>
+     <identifyBy>xpath</identifyBy>
+     <value>//div[@class='content_boxMain']/table/descendant::td/a</value>
+   </object>
+ </page>
+   <page title ="America's Best Contacts and Eyeglasses Home Page">
+
+    <object>
+       <name>DoctorsMenu_lnk</name>
+       <identifyBy>xptah</identifyBy>
+       <value>//a[normalize-space(text())='Doctors']</value>
+     </object>
+
+   </page>
+
+  <page title ="External Application">
+
+    <object>
+      <name>ExternalApplication_menu</name>
+      <identifyBy>xpath</identifyBy>
+      <value>//div[@class='secmenu']/ul/li/a</value>
+    </object>
+
+    <object>
+      <name>ResultsTable1_tbl</name>
+      <identifyBy>xpath</identifyBy>
+      <value>//table[@class='formview']/descendant::tr[2]/td//a</value>
+    </object>
+    
+    <object>
+      <name>ResultsTable2_tbl</name>
+      <identifyBy>xpath</identifyBy>
+      <value>//table[@class='formview']/descendant::tr[2]/td//a/nobr</value>
+    </object>
+
+    <object>
+      <name>ResultsTable_frm</name>
+      <identifyBy>id</identifyBy>
+      <value>iFrameSiteContents</value>
+    </object>
+    
+
+  </page>
+
+      
+
+
+      <page title ="Store Scheduler Page">
+
+     <object>
+       <name>StoreNumber_txt</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//td[@class='DATA_ENTRY_GROUP']//input[@id='txtStoreNumber']</value>
+     </object>
+
+     <object>
+       <name>StoreInfoPopUpCloseBtn_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//div[@id='createsearchdiv']/descandant::img[@title='Close']</value>
+     </object>
+
+
+        <object>
+          <name>StoreInfoPopUp_win</name>
+          <identifyBy>id</identifyBy>
+          <value>createsearchdiv</value>
+        </object>
+
+
+
+        
+
+        <object>
+       <name>GoButton_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//div[@id='dvStoreNumber']/a/descendant::a</value>
+     </object>
+
+     <object>
+       <name>FindPatientButton_btn</name>
+       <identifyBy>id</identifyBy>
+       <value>cmdPatientSearch</value>
+     </object>
+
+     <object>
+       <name>Confirmationtab_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//div[text()='Confirmation']</value>
+     </object>
+
+     <object>
+       <name>RebookListtab_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//div[text()='Rebook List']</value>
+     </object>
+
+     <object>
+       <name>FileRequesttab_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//div[text()='File Request']</value>
+     </object>
+
+     <object>
+       <name>Reportstab_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//div[text()='Reports']</value>
+     </object>
+
+     <object>
+       <name>Show_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//a[text()='Show']</value>
+     </object>
+
+     <object>
+       <name>Close_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//div[@class='closeX']</value>
+     </object>
+
+        <object>
+          <name>StoreInfoCloseBtn_win</name>
+          <identifyBy>xpath</identifyBy>
+          <value>//div[@id='createsearchdiv']//img[@title='Close']</value>
+        </object>
+
+        
+
+      </page>
+   <page title ="America Best Home Page">
+
+     
+     <object>
+       <name>StoreLinkInResults_lnk</name>
+       <identifyBy>id</identifyBy>
+       <value>aAttendance1099Edit</value>
+     </object>
+     
+     <object>
+       <name>LookUp_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//a[text()='Lookup']</value>
+     </object>
+
+     <object>
+       <name>StoreLocationInfo_frm</name>
+       <identifyBy>id</identifyBy>
+       <value>dlg_ifrm_search</value>
+     </object>
+
+     <object>
+       <name>StoreManager_lnk</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//a[text()='Store Manager']/ancestor::tr/following-sibling::tr/descendant::a</value>
+     </object>
+
+     <object>
+       <name>StartButton_btn</name>
+       <identifyBy>id</identifyBy>
+       <value>cmdRefresh</value>
+     </object>
+
+     <object>
+       <name>SearchButton_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//span[text()='Search']</value>
+     </object>
+     <object>
+       <name>SearchButtonn_btn</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//a[text()='Search']</value>
+     </object>
+
+     <object>
+       <name>Appointment_lnk</name>
+       <identifyBy>id</identifyBy>
+       <value>dvModelApptBooked</value>
+     </object>
+
+     <object>
+       <name>PatientFileDaysRecords_drpdwn</name>
+       <identifyBy>id</identifyBy>
+       <value>ucSchedulerHeaderPatientFile_cboPatientFileDaysRecords</value>
+     </object>
+
+     <object>
+       <name>PDFSearchField_txt</name>
+       <identifyBy>xpath</identifyBy>
+       <value>//div[@id='dvSearch']/descendant::input[@id='txtSearch']</value>
+     </object>
+
+
+
+   </page>
+</PageFactory>

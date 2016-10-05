@@ -1,0 +1,7 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU,COSTCENTERNUMBER
+Stores,YES,Cost Center Search in Store in SIM,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Stores,5101
+Districts,YES,Cost Center Search in Store in SIM,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Districts,5101
+Regions,YES,Cost Center Search in Store in SIM,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Regions,5101
+Cost Centers,YES,Cost Center Search in Store in SIM,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Cost Centers,5101
+Cost Center Time Systems,YES,Cost Center Search in Store in SIM,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Cost Center Time Systems,5101
+Search,YES,Cost Center Search in Store in SIM,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Employees,Search,5101

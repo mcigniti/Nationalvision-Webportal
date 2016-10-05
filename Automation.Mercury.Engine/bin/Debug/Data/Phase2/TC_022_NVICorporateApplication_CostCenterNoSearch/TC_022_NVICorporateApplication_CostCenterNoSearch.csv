@@ -1,0 +1,52 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU,COSTCENTERNUMBER
+Stores,YES,Store Search in Assessment Credits,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Stores,5101
+Districts,YES,Store Search in Search,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Districts,5101
+Regions,YES,Store Search in Passed - Today,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Regions,5101
+Cost Centers,YES,Store Search in Search,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Cost Centers,5101
+Cost Center Time Systems,YES,Store Search in Participants,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Cost Center Time Systems,5101
+Search,YES,Store Search in Store Messages,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Employees,Search,5101
+Stores,YES,Store Search in Security Deposit,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame/Tag Requests,Org Units,Stores,5101
+Districts,YES,Store Search in LT Rev Lease Commission,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame/Tag Requests,Org Units,Districts,5101
+Regions,YES,Store Search in NPS Rolling Periods,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame/Tag Requests,Org Units,Regions,5101
+Cost Centers,YES,Store Search in Marketing Initiatives,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame/Tag Requests,Org Units,Cost Centers,5101
+Cost Center Time Systems,YES,Store Search in ACLens Patient Search,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame/Tag Requests,Org Units,Cost Center Time Systems,5101
+Search,YES,Store Search in Doctor Coverage,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame/Tag Requests,Employees,Search,5101
+Stores,YES,Store Search in UltiPro - SDS Lookup,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Fram Transfers Received,Org Units,Stores,5101
+Districts,YES,Store Search in Search,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Fram Transfers Received,Org Units,Districts,5101
+Regions,YES,Store Search in Fees,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Fram Transfers Received,Org Units,Regions,5101
+Cost Centers,YES,Store Search in Incidents,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Fram Transfers Received,Org Units,Cost Centers,5101
+Cost Center Time Systems,YES,Store Search in Telephone Inventory,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Fram Transfers Received,Org Units,Cost Center Time Systems,5101
+Search,YES,Store Search in Monthly Entry,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Fram Transfers Received,Employees,Search,5101
+Stores,YES,Store Search in Daily Entry,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame Transfer History,Org Units,Stores,5101
+Districts,YES,Store Search in 1099 Doctor Entry,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame Transfer History,Org Units,Districts,5101
+Regions,YES,Store Search in PCI Audit History,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame Transfer History,Org Units,Regions,5101
+Cost Centers,YES,Store Search in Planograms,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame Transfer History,Org Units,Cost Centers,5101
+Cost Center Time Systems,YES,Store Search in Frame_Tag Requests,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame Transfer History,Org Units,Cost Center Time Systems,5101
+Search,YES,Store Search in Store Directory (for stores),,NVI Corporate Portal,NVI Corporate Portal,Store Info,Frame Transfer History,Employees,Search,5101
+Stores,YES,Store Search in SDS Store Export,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Club Call,Org Units,Stores,5101
+Districts,YES,Store Search in Location Info for DM,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Club Call,Org Units,Districts,5101
+Regions,YES,Store Search in Location Info,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Club Call,Org Units,Regions,5101
+Cost Centers,YES,Store Search in Locator (W2GI),,NVI Corporate Portal,NVI Corporate Portal,Store Info,Club Call,Org Units,Cost Centers,5101
+Cost Center Time Systems,YES,Store Search in Alignment By Store,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Club Call,Org Units,Cost Center Time Systems,5101
+Search,YES,Store Search in Store POS,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Club Call,Employees,Search,5101
+Business Insurance Lab & DC Allocation,YES,Store Search in Relocation History,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Business Insurance,Business Insurance Lab & DC Allocation,5101
+Business License Amortization,YES,Store Search in Relocation,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Prepaid Expenses,Business License Amortization,5101
+Business License Export Files,YES,Store Search in Remodel,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Prepaid Expenses,Business License Export Files,5101
+Personal Property Tax Amort,YES,Store Search in Closing,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Prepaid Expenses,Personal Property Tax Amort,5101
+Personal Property Tax Amort Export Files,YES,Store Search in Schedule,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Prepaid Expenses,Personal Property Tax Amort Export Files,5101
+Prepaid Doctor Insurance,YES,Store Search in Audit,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Prepaid Expenses,Prepaid Doctor Insurance,5101
+Personal Property Tax Amort Export Files,YES,Store Search in Companies,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Prepaid Expenses,Personal Property Tax Amort Export Files,5101
+Prepaid Other Amortization,YES,Store Search in Stores,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Prepaid Expenses,Prepaid Other Amortization,5101
+Prepaid Stores Amortization,YES,Store Search in Dialers Status,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Prepaid Expenses,Prepaid Stores Amortization,5101
+Real Estate Tax Amortization,YES,Store Search in Calls Lookup,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Prepaid Expenses,Real Estate Tax Amortization,5101
+Real Estate Tax Amortization Export Files,YES,Store Search in Today Calls,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Prepaid Expenses,Real Estate Tax Amortization Export Files,5101
+CAM Amortizations,YES,Store Search in Yesterday Calls,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Rent Related,CAM Amortizations,5101
+Capital Leases,YES,Store Search in Advanced Search,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Rent Related,Capital Leases,5101
+Fred Meyer Rent,YES,Store Search in Store Services,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Rent Related,Fred Meyer Rent,5101
+Leases,YES,Store Search in Canceled Jobs,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Rent Related,Leases,5101
+LT Rev Lease Export Files,YES,Store Search in Jobs Search,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Rent Related,LT Rev Lease Export Files,5101
+WC Lab & DC Allocation,YES,Store Search in 3 Days: Shipped,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Worker's Compensation,WC Lab & DC Allocation,5101
+Debt Fee Assets Amortization,YES,Store Search in Today: Shipped,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Other,Debt Fee Assets Amortization,5101
+Intangible Assets Amortization,YES,Store Search in Today: Received,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Other,Intangible Assets Amortization,5101
+Professional Fee,YES,Store Search in In-Process Jobs,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Other,Professional Fee,5101
+Settlement,YES,Store Search in NPS Rolling Periods,,NVI Corporate Portal,NVI Corporate Portal,corporate,accounting,Other,Settlement,5101

@@ -1,0 +1,3 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU,STORENUMBER
+1,YES,Store_InfoScheduler_AdminScheduleWeekly Schedule,,FirstSight Corporate Portal,,Store Info,Scheduler Admin,Schedule,Weekly Schedule,5101
+2,YES,Store_InfoScheduler_AdminStoresScheduler,,FirstSight Corporate Portal,,Store Info,Scheduler Admin,Stores,Scheduler,5101

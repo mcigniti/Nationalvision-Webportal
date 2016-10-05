@@ -1,0 +1,55 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU,STORENUMBER
+1,YES,Store Search in Assessment Credits,,NVI Corporate Portal,NVI Corporate Portal,Training,Assessments,Credits,Assessment Credits,5101
+2,YES,Store Search in Search,,NVI Corporate Portal,NVI Corporate Portal,Training,Assessments,Group Schedule,Search All,5101
+3,YES,Store Search in Passed - Today,,NVI Corporate Portal,NVI Corporate Portal,Training,Assessments,Assessment Schedule,Passed - Today,5101
+4,YES,Store Search in Search,,NVI Corporate Portal,NVI Corporate Portal,Training,Assessments,Assessment Schedule,Search All,5101
+5,YES,Store Search in Participants,,NVI Corporate Portal,NVI Corporate Portal,Training,Assessments,Associates,Participants,5101
+6,YES,Store Search in Store Messages,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Portal Contents,Store Messages,5101
+7,YES,Store Search in Security Deposit,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,Security Deposit,5101
+8,YES,Store Search in LT Rev Lease Commission,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Rent Related,LT Rev Lease Commission,5101
+9,YES,Store Search in Dialers Status,,NVI Corporate Portal,NVI Corporate Portal,Store Info,RediCall Lookup,Corporate IS,Dialers Status,5101
+10,YES,Store Search in Calls Lookup,,NVI Corporate Portal,NVI Corporate Portal,Store Info,RediCall Lookup,Stores,Calls Lookup,5101
+11,YES,Store Search in Today Calls,,NVI Corporate Portal,NVI Corporate Portal,Store Info,RediCall Lookup,Stores,Today Calls,5101
+12,YES,Store Search in Yesterday Calls,,NVI Corporate Portal,NVI Corporate Portal,Store Info,RediCall Lookup,Stores,Yesterday Calls,5101
+13,YES,Store Search in Advanced Search,,NVI Corporate Portal,NVI Corporate Portal,Store Info,WIP (Work In Progress),Corporate,Advanced Search,5101
+14,YES,Store Search in Store Services,,NVI Corporate Portal,NVI Corporate Portal,Store Info,WIP (Work In Progress),Stores,Store Services,5101
+15,YES,Store Search in Canceled Jobs,,NVI Corporate Portal,NVI Corporate Portal,Store Info,WIP (Work In Progress),Stores,Canceled Jobs,5101
+16,YES,Store Search in Jobs Search,,NVI Corporate Portal,NVI Corporate Portal,Store Info,WIP (Work In Progress),Stores,Jobs Search,5101
+17,YES,Store Search in 3 Days: Shipped,,NVI Corporate Portal,NVI Corporate Portal,Store Info,WIP (Work In Progress),Stores,3 Days: Shipped,5101
+18,YES,Store Search in Today: Shipped,,NVI Corporate Portal,NVI Corporate Portal,Store Info,WIP (Work In Progress),Stores,Today: Shipped,5101
+19,YES,Store Search in Today: Received,,NVI Corporate Portal,NVI Corporate Portal,Store Info,WIP (Work In Progress),Stores,Today: Received,5101
+20,YES,Store Search in In-Process Jobs,,NVI Corporate Portal,NVI Corporate Portal,Store Info,WIP (Work In Progress),Stores,In-Process Jobs,5101
+21,YES,Store Search in Weekly Schedule,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Scheduler Appointments,Schedule,Weekly Schedule,5101
+22,YES,Store Search in Scheduler,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Scheduler Appointments,Stores,Scheduler,5101
+23,YES,Store Search in NPS Rolling Periods,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Report Card,NPS Rolling Periods,5101
+24,YES,Store Search in Marketing Initiatives,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Other,Marketing Initiatives,5101
+25,YES,Store Search in ACLens Patient Search,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Other,ACLens Patient Search,5101
+26,YES,Store Search in Doctor Coverage,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Other,Doctor Coverage,5101
+27,YES,Store Search in UltiPro - SDS Lookup,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Employees,UltiPro - SDS Lookup,5101
+28,YES,Store Search in Search,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Employees,Search,5101
+29,YES,Store Search in Fees,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,DREX,Fees,5101
+30,YES,Store Search in Telephone Inventory,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Property,Telephone Inventory,5101
+31,YES,Store Search in Monthly Entry,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Military,Monthly Entry,5101
+32,YES,Store Search in Daily Entry,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Military,Daily Entry,5101
+33,YES,Store Search in 1099 Doctor Entry,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,1099 Doctor Entry,5101
+34,YES,Store Search in PCI Audit History,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,PCI Audit History,5101
+35,YES,Store Search in Planograms,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Planograms,5101
+36,YES,Store Search in Frame_Tag Requests,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Frame/Tag Requests,5101
+37,YES,Store Search in Store Directory (for stores),,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Store Directory (for stores),5101
+38,YES,Store Search in SDS Store Export,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,SDS Store Export,5101
+39,YES,Store Search in Location Info for DM,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Location Info for DM,5101
+40,YES,Store Search in Location Info,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Location Info,5101
+41,YES,Store Search in Locator (W2GI),,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Locator (W2GI),5101
+42,YES,Store Search in Alignment By Store,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Alignment By Store,5101
+43,YES,Store Search in Store POS,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Store POS,5101
+44,YES,Store Search in Store LAN,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Store LAN,5101
+45,YES,Store Search in Relocation History,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Relocation History,5101
+46,YES,Store Search in Relocation,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Relocation,5101
+47,YES,Store Search in Remodel,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Remodel,5101
+48,YES,Store Search in Closing,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Closing,5101
+49,YES,Store Search in Schedule,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Schedule,5101
+50,YES,Store Search in Audit,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Audit,5101
+51,YES,Store Search in Companies,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Companies,5101
+52,YES,Store Search in Stores,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Stores,5101
+53,YES,Store Search in Appointments Search,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Scheduler Admin,Schedule,Appointments Search,5101
+54,YES,Store Search in Monthly Schedule,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Scheduler Admin,Schedule,Monthly Schedule,5101

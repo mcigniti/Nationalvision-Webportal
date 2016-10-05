@@ -1,0 +1,28 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU,STORENUMBER
+1,YES,Calls Lookup,,America's Best Portal,America's Best Portal,Customer Info,RediCall Lookup,Stores,Calls Lookup,5101
+2,YES,Today Calls,,America's Best Portal,America's Best Portal,Customer Info,RediCall Lookup,Stores,Today Calls,5101
+3,YES,Yesterday Calls,,America's Best Portal,America's Best Portal,Customer Info,RediCall Lookup,Stores,Yesterday Calls,5101
+4,YES,Advanced Search,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Corporate,Advanced Search,5101
+5,YES,Store Services,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,Store Services,5101
+6,YES,Canceled Jobs,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,Canceled Jobs,5101
+7,YES,Jobs Search,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,Jobs Search,5101
+8,YES,3 Days_Shipped,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,3 Days: Shipped,5101
+9,YES,Today_Shipped,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,Today: Shipped,5101
+10,YES,Today_Received,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,Today: Received,5101
+11,YES,In-Process Jobs,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,In-Process Jobs,5101
+12,YES,Assessment Credits,,America's Best Portal,America's Best Portal,Associates,My Assessments,Credits,Assessment Credits,5101
+13,YES,Expired - 30 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Expired - 30 days,5101
+14,YES,Canceled - 7 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Canceled - 7 days,5101
+15,YES,Compledted - 3 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Completed - 3 days,5101
+16,YES,Scheduled - 3 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Scheduled - 3 days,5101
+17,YES,Search,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Search,5101
+18,YES,Expired - 30 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Expired - 30 days,5101
+19,YES,Canceled - 30 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Canceled - 30 days,5101
+20,YES,Released - 30 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Released - 30 days,5101
+21,YES,On Hold,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,On Hold,5101
+22,YES,Failed - 3 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Failed - 3 days,5101
+23,YES,Passed - Today,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Passed - Today,5101
+24,YES,Scheduled - Today,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Scheduled - Today,5101
+25,YES,Most Recent - Today,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Most Recent - Today,5101
+26,YES,Search,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Search,5101
+27,YES,Participants,,America's Best Portal,America's Best Portal,Associates,My Assessments,Associates,Participants,5101

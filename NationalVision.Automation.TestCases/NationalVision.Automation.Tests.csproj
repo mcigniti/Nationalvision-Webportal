@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3ED28F0-6374-4AB2-82F9-C5F76655C047}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NationalVision.Automation.Tests</RootNamespace>
+    <AssemblyName>NationalVision.Automation.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Flurl, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.1.0.10\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+MonoTouch10\Flurl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RemoteBrowserMobProxy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RemoteBrowserMobProxy.0.0.1\lib\net45\RemoteBrowserMobProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver">
+      <HintPath>..\Automation.Mercury\Lib\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cases\ClickAllMenus\ClickLinks_CompleteWebPortal.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\EmptySearch\TC_024_EmptySearch_NVI.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\CostCenterNumberSearch\TC_023_CostCenterNoSearch_FirstSight.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\CostCenterNumberSearch\TC_022_CostCenterNoSearch_NVI.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAddNewButton\TC_021_ClickAddNewButton_AmericaBest.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAddNewButton\TC_020_ClickAddNewButton_Walmart.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAddNewButton\TC_019_ClickAddNewButton_EGW.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAddNewButton\TC_018_ClickAddNewButton_FirstSight.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAddNewButton\TC_017_ClickAddNewButton_NVI.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\StoreNumberSearch\TC_009_StoreNumberSearch_NVI.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\StoreNumberSearch\TC_010_StoreNumberSearch_FirstSight.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\StoreNumberSearch\TC_011_StoreNumberSearch_AmericaBest.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\StoreNumberSearch\TC_012_StoreNumberSearch_EGW.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\StoreNumberSearch\TC_013_StoreNumberSearch__OpticalCenter.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\StoreNumberSearch\TC_014_StoreNumberSearch_VistaApplication.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\StoreNumberSearch\TC_015_VisionCenterOrWalmartApplication.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\StoreNumberSearch\TC_016_LABApplication.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAllMenus\TC_002_ClickLinks_FirstSight.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAllMenus\TC_004_ClickLinks_EGW.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAllMenus\TC_005_ClickLinks_OpticalCenter.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAllMenus\TC_006_ClickLinks_VistaOptical.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAllMenus\TC_007_ClickLinks_VisionCenter.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAllMenus\TC_008_ClickLinks_LABPortal.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAllMenus\TC_003_ClickLinks_AmericasBest.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Cases\ClickAllMenus\TC_001_ClickLinks_NVI.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Automation.Mercury.Report\Automation.Mercury.Report.csproj">
+      <Project>{7e7def9f-b4ab-4991-9785-742b81df4363}</Project>
+      <Name>Automation.Mercury.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Automation.Mercury\Automation.Mercury.csproj">
+      <Project>{2cb9720c-15ba-4d2f-8c27-224a137e0afa}</Project>
+      <Name>Automation.Mercury</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NationalVision.Automation.Pages\NationalVision.Automation.Pages.csproj">
+      <Project>{02d344c7-5b32-4d49-9b3f-874c5dc726c1}</Project>
+      <Name>NationalVision.Automation.Pages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\EmptySearch\TC_024_EmptySearch_NVI.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\CostCenterNumberSearch\TC_023_CostCenterNoSearch_FirstSight.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\CostCenterNumberSearch\TC_022_CostCenterNoSearch_NVI.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAddNewButton\TC_021_ClickAddNewButton_AmericaBest.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAddNewButton\TC_020_ClickAddNewButton_Walmart.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAddNewButton\TC_019_ClickAddNewButton_EGW.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAddNewButton\TC_018_ClickAddNewButton_FirstSight.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAddNewButton\TC_017_ClickAddNewButton_NVI.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAllMenus\TC_002_ClickLinks_FirstSight.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAllMenus\TC_007_ClickLinks_VisionCenter.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAllMenus\TC_008_ClickLinks_LABPortal.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAllMenus\TC_001_ClickLinks_NVI.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAllMenus\ClickLinks_CompleteWebPortal.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAllMenus\TC_006_ClickLinks_VistaOptical.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAllMenus\TC_005_ClickLinks_OpticalCenter.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAllMenus\TC_004_ClickLinks_EGW.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\ClickAllMenus\TC_003_ClickLinks_AmericasBest.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\StoreNumberSearch\TC_009_StoreNumberSearch_NVI.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\StoreNumberSearch\TC_010_StoreNumberSearch_FirstSight.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\StoreNumberSearch\TC_011_StoreNumberSearch_AmericaBest.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\StoreNumberSearch\TC_012_StoreNumberSearch_EGW.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\StoreNumberSearch\TC_013_StoreNumberSearch__OpticalCenter.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\StoreNumberSearch\TC_014_FredMeyerApplicationOrVistaApplication.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\StoreNumberSearch\TC_015_VisionCenterOrWalmartApplication.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\StoreNumberSearch\TC_016_LABApplication.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Test_Common.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

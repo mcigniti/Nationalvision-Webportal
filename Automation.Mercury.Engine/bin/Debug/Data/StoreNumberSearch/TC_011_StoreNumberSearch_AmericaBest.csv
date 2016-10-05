@@ -1,0 +1,27 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU,STORENUMBER
+1,NO,Calls Lookup,,America's Best Portal,America's Best Portal,Customer Info,RediCall Lookup,Stores,Calls Lookup,5101
+2,NO,Today Calls,,America's Best Portal,America's Best Portal,Customer Info,RediCall Lookup,Stores,Today Calls,5101
+3,NO,Yesterday Calls,,America's Best Portal,America's Best Portal,Customer Info,RediCall Lookup,Stores,Yesterday Calls,5101
+5,NO,Store Services,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,Store Services,5101
+6,NO,Canceled Jobs,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,Canceled Jobs,5101
+7,NO,Jobs Search,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,Jobs Search,5101
+8,NO,3 Days_Shipped,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,3 Days: Shipped,5101
+9,NO,Today_Shipped,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,Today: Shipped,5101
+10,NO,Today_Received,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,Today: Received,5101
+11,NO,In-Process Jobs,,America's Best Portal,America's Best Portal,Customer Info,WIP Tracking,Stores,In-Process Jobs,5101
+12,NO,Assessment Credits,,America's Best Portal,America's Best Portal,Associates,My Assessments,Credits,Assessment Credits,5101
+13,NO,Expired - 30 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Expired - 30 days,5101
+14,NO,Canceled - 7 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Canceled - 7 days,5101
+15,NO,Compledted - 3 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Completed - 3 days,5101
+16,NO,Scheduled - 3 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Scheduled - 3 days,5101
+17,NO,Search,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Search,5101
+18,NO,Expired - 30 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Expired - 30 days,5101
+19,NO,Canceled - 30 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Canceled - 30 days,5101
+20,NO,Released - 30 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Released - 30 days,5101
+21,NO,On Hold,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,On Hold,5101
+22,NO,Failed - 3 days,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Failed - 3 days,5101
+23,NO,Passed - Today,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Passed - Today,5101
+24,NO,Scheduled - Today,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Scheduled - Today,5101
+25,NO,Most Recent - Today,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Most Recent - Today,5101
+26,NO,Search,,America's Best Portal,America's Best Portal,Associates,My Assessments,Assessment Schedule,Search,5101
+27,NO,Participants,,America's Best Portal,America's Best Portal,Associates,My Assessments,Associates,Participants,5101

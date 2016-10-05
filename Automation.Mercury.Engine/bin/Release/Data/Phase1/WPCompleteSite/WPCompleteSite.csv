@@ -1,0 +1,9 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME
+1,YES,TC_001_NVICorporateApplication,,NVI Corporate Portal
+2,YES,TC_002_FirstSightCorporateApplication,,FirstSight Corporate Portal
+3,YES,TC_003_AmericasBestApplication,,America's Best Portal
+4,YES,TC_004_EyeglassWorldApplication,,Eyeglass World Portal
+5,YES,TC_005_OpticalCenterOrMilitaryApplication,,Military Portal
+6,YES,TC_006_FredMeyerApplicationOrVistaApplication,,Fred Meyer Portal
+7,YES,TC_007_VisionCenterOrWalmartApplication,,Walmart Portal
+8,YES,TC_008_LABApplication,,Lab Portal

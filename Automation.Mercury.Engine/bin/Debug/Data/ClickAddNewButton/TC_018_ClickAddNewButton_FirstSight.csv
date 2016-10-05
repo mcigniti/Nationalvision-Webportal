@@ -1,0 +1,37 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU
+135,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Org Units,Stores
+136,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Org Units,Districts
+137,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Org Units,Regions
+138,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Org Units,Companies
+139,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Org Units,Cost Centers
+140,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Org Units,Cost Center Time Systems
+141,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Org Units,Cost Center Support Tiers
+142,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Org Units,Cost Center Support Tiers by Period
+143,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Org Units,Substitute Managers
+144,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Store,Store
+145,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Store,Closing
+146,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Store,Remodel
+147,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Store,Relocation
+148,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Store,Store POS
+149,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Store,Alignment By Month
+150,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Store,Locator (W2GI)
+151,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Store,Store Tasks
+152,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Store,1099 Doctor Entry
+153,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Military,Daily Entry
+154,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Military,Monthly Entry
+155,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Property,Vendors
+156,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Property,Incidents
+157,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Property,Labs
+158,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Property,Military Bases
+159,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,DREX,Fees
+160,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,DREX,SKU
+161,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,DREX,SKU Code by DREX
+162,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Employees,Search
+163,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Other,Dictionary
+164,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Other,Fiscal Calendar
+165,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Other,Calendar
+166,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Other,Doctor Coverage
+167,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Other,Marketing Initiatives
+168,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Report Card,NPS Rolling Periods
+169,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Report Card,Period Conversion
+170,YES,Click Add New Button,,FirstSight Corporate Portal,FirstSight Corporate Portal,Store Info,SIM,Report Card,Manager Eligiblity

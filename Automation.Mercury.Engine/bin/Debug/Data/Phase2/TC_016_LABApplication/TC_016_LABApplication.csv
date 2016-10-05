@@ -1,0 +1,9 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU,STORENUMBER
+1,YES,Store_services,,Lab Portal,Lab Portal,Applications,Store WIP,Stores,Store Services,5101
+2,YES,Canceled_Jobs,,Lab Portal,Lab Portal,Applications,Store WIP,Stores,Canceled Jobs,5101
+3,YES,Jobs Search,,Lab Portal,Lab Portal,Applications,Store WIP,Stores,Jobs Search,5101
+4,YES,3 Days_Shipped,,Lab Portal,Lab Portal,Applications,Store WIP,Stores,3 Days: Shipped,5101
+5,YES,Today_Shipped,,Lab Portal,Lab Portal,Applications,Store WIP,Stores,Today: Shipped,5101
+6,YES,Today_Received,,Lab Portal,Lab Portal,Applications,Store WIP,Stores,Today: Received,5101
+7,YES,In-Process_Jobs,,Lab Portal,Lab Portal,Applications,Store WIP,Stores,In-Process Jobs,5101
+8,YES,Advanced_Search,,Lab Portal,Lab Portal,Applications,Store WIP,Corporate,Advanced Search,5101
