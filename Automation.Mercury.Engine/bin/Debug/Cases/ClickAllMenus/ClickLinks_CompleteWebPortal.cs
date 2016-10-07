@@ -32,9 +32,6 @@ namespace NationalVision.Automation.Tests.Cases.ClickAllMenus.ClickLinks_Complet
                     Step = "Select " + application + " from the navigation menu";
                     CommonPage.SelectApplication(Driver, Reporter, application);
 
-                    //Step = "Assert page title of " + TestData["TITLE"] + "";
-                    //CommonPage.AssertPageTitle(Driver, Reporter, TestData["TITLE"]);
-
                     Step = "Get the menu count  and menu names in " + "<b>" + application + "</b>" + " application";
                     menuCount = CommonPage.GetMenuCount(Driver, Reporter, application);
                     menuNames = CommonPage.GetMenuNames(Driver, Reporter, menuIndex, menuCount);

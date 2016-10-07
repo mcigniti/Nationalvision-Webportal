@@ -1,0 +1,4 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU
+1,YES,Click Add New Button,,America's Best Portal,America's Best Portal,Associates,My Assessments,Group Schedule,Search All
+2,YES,Click Add New Button,,America's Best Portal,America's Best Portal,Associates,My Assessments,Credits,Assessment Credits
+3,YES,Click Add New Button,,America's Best Portal,America's Best Portal,Associates,My Assessments,Contents,Assessment Groups

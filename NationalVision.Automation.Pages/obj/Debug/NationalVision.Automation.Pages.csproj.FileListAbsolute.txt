@@ -310,3 +310,97 @@ C:\Users\RAVI\Downloads\30092016\30092016\NationalVision.Automation.Pages\bin\De
 C:\Users\RAVI\Downloads\30092016\30092016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.csprojResolveAssemblyReference.cache
 C:\Users\RAVI\Downloads\30092016\30092016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.dll
 C:\Users\RAVI\Downloads\30092016\30092016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.pdb
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\MyAccountPatientPage.cs
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\MyAccountAdressBookPage.cs
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\CommonPage.cs
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\CorporatePage.cs
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\LoginPage.cs
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\NationalVision.Automation.Pages.dll
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\NationalVision.Automation.Pages.pdb
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.dll
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.Report.dll
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\Flurl.dll
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\RemoteBrowserMobProxy.dll
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\RestSharp.dll
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\WebDriver.dll
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\WebDriver.Support.dll
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.Report.pdb
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.pdb
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\Flurl.pdb
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\Flurl.xml
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\bin\Debug\RestSharp.xml
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.csprojResolveAssemblyReference.cache
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.dll
+C:\Users\E002034\Desktop\New folder\02102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.pdb
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\CommonPage.cs
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\NationalVision.Automation.Pages.dll
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\NationalVision.Automation.Pages.pdb
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.dll
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.Report.dll
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\Flurl.dll
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\RemoteBrowserMobProxy.dll
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\RestSharp.dll
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\WebDriver.dll
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\WebDriver.Support.dll
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.Report.pdb
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.pdb
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\Flurl.pdb
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\Flurl.xml
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\bin\Debug\RestSharp.xml
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.csprojResolveAssemblyReference.cache
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.dll
+C:\Users\e002321\Desktop\PremChand\project\Latest - Copy 3\05102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.pdb
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\CommonPage.cs
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\NationalVision.Automation.Pages.dll
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\NationalVision.Automation.Pages.pdb
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.dll
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.Report.dll
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\Flurl.dll
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\RemoteBrowserMobProxy.dll
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\RestSharp.dll
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\WebDriver.dll
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\WebDriver.Support.dll
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.Report.pdb
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.pdb
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\Flurl.pdb
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\Flurl.xml
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\bin\Debug\RestSharp.xml
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.csprojResolveAssemblyReference.cache
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.dll
+C:\Users\E002034\Desktop\New folder\06102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.pdb
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\CommonPage.cs
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\NationalVision.Automation.Pages.dll
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\NationalVision.Automation.Pages.pdb
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.dll
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.Report.dll
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\Flurl.dll
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\RemoteBrowserMobProxy.dll
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\RestSharp.dll
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\WebDriver.dll
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\WebDriver.Support.dll
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.Report.pdb
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.pdb
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\Flurl.pdb
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\Flurl.xml
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\bin\Debug\RestSharp.xml
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.csprojResolveAssemblyReference.cache
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.dll
+C:\Users\RAVI\Downloads\06102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.pdb
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\CommonPage.cs
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\NationalVision.Automation.Pages.dll
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\NationalVision.Automation.Pages.pdb
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.dll
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.Report.dll
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\Flurl.dll
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\RemoteBrowserMobProxy.dll
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\RestSharp.dll
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\WebDriver.dll
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\WebDriver.Support.dll
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.Report.pdb
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\Automation.Mercury.pdb
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\Flurl.pdb
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\Flurl.xml
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\bin\Debug\RestSharp.xml
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.csprojResolveAssemblyReference.cache
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.dll
+C:\Users\E002034\Downloads\07102016\NationalVision.Automation.Pages\obj\Debug\NationalVision.Automation.Pages.pdb

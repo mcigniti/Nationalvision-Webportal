@@ -62,7 +62,7 @@ namespace Automation.Mercury
         /// </summary>
         public string resultsPath = string.Empty;
 
-        
+
         /// <summary>
         /// Executes Test Cases
         /// </summary>
@@ -92,7 +92,7 @@ namespace Automation.Mercury
                     this.Reporter.Browser.PlatformName = String.Format("{0} {1}", ((string)wmi["Caption"]).Trim(), (string)wmi["OSArchitecture"]);
                     this.Reporter.Browser.PlatformVersion = ((string)wmi["Version"]);
                     this.Reporter.Browser.BrowserName = Driver.Capabilities.BrowserName;
-                    this.Reporter.Browser.BrowserVersion = Driver.Capabilities.Version.Substring(0,2);
+                    this.Reporter.Browser.BrowserVersion = Driver.Capabilities.Version.Substring(0, 2);
 
                 }
                 else
@@ -100,7 +100,7 @@ namespace Automation.Mercury
                     this.Reporter.Browser.PlatformName = browserConfig.ContainsKey("os") ? browserConfig["os"] : browserConfig["device"];
                     this.Reporter.Browser.PlatformVersion = browserConfig.ContainsKey("os_version") ? browserConfig["os_version"] : browserConfig.ContainsKey("realMobile") ? "Real" : "Emulator";
                     this.Reporter.Browser.BrowserName = browserConfig.ContainsKey("browser") ? browserConfig["browser"] : "Safari";
-                    this.Reporter.Browser.BrowserVersion = browserConfig.ContainsKey("browser_version") ? browserConfig["browser_version"].Substring(0,2) : "";
+                    this.Reporter.Browser.BrowserVersion = browserConfig.ContainsKey("browser_version") ? browserConfig["browser_version"].Substring(0, 2) : "";
                 }
 
                 // Does Seed having anything?
@@ -109,62 +109,37 @@ namespace Automation.Mercury
 
                 this.Reporter.StartTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, TimeZoneInfo.FindSystemTimeZoneById("India Standard Time"));
 
-
                 ExecuteTestCase();
             }
-           catch (Exception ex)
+            catch (Exception ex)
             {
-              
                 this.Reporter.Chapter.Step.Action.IsSuccess = false;
-                this.Reporter.Chapter.Step.Action.Extra =  "Exception Message : " + ex.Message + "<br/>" + ex.InnerException + ex.StackTrace;
+                this.Reporter.Chapter.Step.Action.Extra = "Exception Message : " + ex.Message + "<br/>" + ex.InnerException + ex.StackTrace;
+
+                if (!(ex.ToString().Contains("target window already closed") || ex.ToString().Contains("chrome not reachable") ||
+                      ex.ToString().Contains("unexpected alert open") || (ex.ToString().Contains("timed out after 60 seconds."))))
+                {
+                    // If current iteration is a failure, get screenshot
+                    if (!Reporter.IsSuccess)
+                    {
+                        ITakesScreenshot iTakeScreenshot = Driver;
+                        this.Reporter.Screenshot = iTakeScreenshot.GetScreenshot().AsBase64EncodedString;
+                    }
+                }
             }
             finally
             {
-
                 this.Reporter.IsCompleted = true;
 
                 // If current iteration is a failure, get screenshot
-
                 this.Reporter.EndTime = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, TimeZoneInfo.FindSystemTimeZoneById("India Standard Time"));
 
-                try
+                lock (reportEngine)
                 {
-                    string s = Driver.CurrentWindowHandle;
-
-                    ITakesScreenshot iTakeScreenshot = Driver;
-                    this.Reporter.Screenshot = iTakeScreenshot.GetScreenshot().AsBase64EncodedString;
-
-                    lock (reportEngine)
-                    {
-                        reportEngine.PublishIteration(this.Reporter);
-                        reportEngine.Summarize(false);
-                    }
-                    Driver.Quit();
+                    reportEngine.PublishIteration(this.Reporter);
+                    reportEngine.Summarize(false);
                 }
-                catch (Exception e)
-                {
-                    if (!(e.ToString().Contains("target window already closed") || e.ToString().Contains("chrome not reachable") || e.ToString().Contains("unexpected alert open") ||
-                        (e.ToString().Contains("timed out after 60 seconds."))))
-                    {
-                        // If current iteration is a failure, get screenshot
-                        if (!Reporter.IsSuccess)
-                        {
-                            ITakesScreenshot iTakeScreenshot = Driver;
-                            this.Reporter.Screenshot = iTakeScreenshot.GetScreenshot().AsBase64EncodedString;
-                        }
-                    }
-                    else
-                    {
-                        this.Reporter.Chapter.Step.Action.Extra = "Browser closed unexpectedly or chrome not reachable or unexpected alert open/not handled the alert";
-                        lock (reportEngine)
-                        {
-                            reportEngine.PublishIteration(this.Reporter);
-                            reportEngine.Summarize(false);
-                        }
-                        Driver.Quit();
-                    }
-                }
-
+                Driver.Quit();
             }
         }
 
@@ -191,9 +166,9 @@ namespace Automation.Mercury
                 Reporter.Add(new Report.Chapter(value));
             }
         }
-
-
+        
         #region USER CREDENTAILS
+
         // ** Below veriables are used for to create new account
         protected string UserName = "mdarabastu";
         protected string Password = "nationalvision";

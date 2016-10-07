@@ -1,0 +1,133 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU
+1,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Business Insurance,Bus Ins Allocation
+2,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Business Insurance,Bus Ins Lab & DC Allocation
+3,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Business Insurance,Bus Ins Policy Invoices
+4,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Prepaid Expense,Business License Amortization
+5,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Prepaid Expense,Payee Tax Code Additions
+6,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Prepaid Expense,Personal Property Tax Amort
+7,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Prepaid Expense,Prepaid Doctor Insurance
+8,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Prepaid Expense,Prepaid Doctor Ins True Up
+9,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Prepaid Expense,Prepaid Other Amortization
+10,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Prepaid Expense,Prepaid Stores Amortization
+11,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Prepaid Expense,Real Estate Tax Amortization
+12,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Rent Related,CAM Amortizations
+13,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Rent Related,Capital Leases
+14,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Rent Related,Fred Meyer Rent
+15,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Rent Related,Leases
+16,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Rent Related,LT Rev Lease Commission
+17,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Workers Compensation,WC Allocation
+18,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Workers Compensation,WC Amortization Losses
+19,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Workers Compensation,WC Lab & DC Allocation
+20,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Workers Compensation,WC Policy Invoices
+21,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,Debt Fee Assets Additions
+22,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,Debt Fee Assets Amortization
+23,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,DREX
+24,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,GL Accounts Addition
+25,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,Intangible Assets Addition
+26,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,Intangible Assets Amortization
+27,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,Medical Reserve
+28,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,Professional Fee
+29,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,Security Deposit
+30,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,Settlement
+31,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Accounting,Other,Universal Allocation
+32,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Items,Pending
+33,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Items,Submitted
+34,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Items,Approved
+35,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Items,Rejected
+36,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Items,Revoked
+37,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Items,Published now
+38,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Items,Expired
+39,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Items,All items I entered
+40,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Reviews,Items I have to review
+41,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Reviews,Items I reviewed
+42,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Reviews,Items I approved
+43,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management,My Reviews,Items I rejected
+44,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Content Management, General Search ,All Items
+45,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Users,User Groups
+46,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Security,Permission Subjects
+47,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Security,External System Passwords
+48,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Portal Menus,Menu Headers
+49,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Portal Menus,Menu Headers
+50,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Applications,Menu Headers
+51,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Applications,Menus
+52,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Applications,Web Pages
+53,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Applications,Web Page/Subjects
+54,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Applications,Web Servers
+55,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Portal Contents,Email Templates
+56,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Portal Contents,Email Messages
+57,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Portal Contents,Exective Messages
+58,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Portal Contents,Associate of the Month
+59,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Portal Management,Portal Contents,Store Messages
+60,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Users,User Groups
+61,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Security,Permission Subjects
+62,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Security,External System Passwords
+63,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Portal Menus,Menu Headers
+64,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Portal Menus,Menus
+65,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Applications,Menu Headers
+66,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Applications,Menus
+67,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Applications,Web Pages
+68,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Applications,Web Page/Subjects
+69,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Applications,Web Servers
+70,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Portal Contents,Email Templates
+71,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Portal Contents,Email Messages
+72,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Portal Contents,Exective Messages
+74,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Templates,Portal Contents,Store Messages
+75,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Users,User Groups
+76,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Security,Permission Subjects
+77,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Security,External System Passwords
+78,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Portal Menus,Menu Headers
+79,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Portal Menus,Menus
+80,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Applications,Menu Headers
+81,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Applications,Menus
+82,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Applications,Web Pages
+83,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Applications,Web Page/Subjects
+84,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Applications,Web Servers
+85,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Portal Contents,Email Templates
+86,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Portal Contents,Email Messages
+87,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Portal Contents,File Groups
+88,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Portal Contents,Exective Messages
+90,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Corporate,Email Messages,Portal Contents,Store Messages
+91,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,HR,Associate of the Month,,
+92,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Training,Assessments,Contents,Assessment Groups
+93,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Training,Assessments,Credits,Assessment Credits
+94,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Store Messages,,
+95,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Store Tasks,,
+96,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Managed Inquiry,,
+97,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Scheduler Appointments,System,Email Templates
+98,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,Scheduler Admin,System,Email Templates
+102,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Companies
+105,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Cost Center Support Tiers
+106,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Cost Center Support Tiers by Period
+104,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Cost Center Time Systems
+103,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Cost Centers
+116,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,1099 Doctor Entry
+113,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Alignment By Month
+109,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Closing
+114,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Locator (W2GI)
+111,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Relocation
+117,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Military,Daily Entry
+120,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Property,Incidents
+121,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Property,Labs
+123,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,DREX,Fees
+124,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,DREX,SKU
+126,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Employees,Search
+129,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Other,Calendar
+127,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Other,Dictionary
+130,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Other,Doctor Coverage
+134,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Report Card,Manager Eligiblity
+132,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Report Card,NPS Rolling Periods
+100,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Districts
+101,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Regions
+99,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Stores
+107,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Org Units,Substitute Managers
+110,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Remodel
+108,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Store
+112,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Store POS
+115,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Store,Store Tasks
+118,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Military,Monthly Entry
+122,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Property,Military Bases
+119,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Property,Vendors
+125,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,DREX,SKU Code By DREX
+128,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Other,Fiscal Calendar
+131,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Other,Marketing Initiatives
+133,YES,Click Add New Button,,NVI Corporate Portal,NVI Corporate Portal,Store Info,SIM,Report Card,Period Conversion

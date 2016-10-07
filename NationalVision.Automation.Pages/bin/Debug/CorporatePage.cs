@@ -1,5 +1,5 @@
 ﻿/* **********************************************************************
- * Description : CommonPage.cs class having methods and objects common to all pages.
+ * Description : CorporatePage.cs class having methods and objects common to all pages.
  *        Header links, Footer links, Menu Tabs, Search window objects.
  *        
  * Date  :  02-Feb-2016
@@ -19,10 +19,11 @@ namespace NationalVision.Automation.Pages
     {
 
         /// <summary>
-        /// Select Corporate lick
+        /// ClickCorporateLink selects the Corporate link
         /// </summary>
-        /// <param name="Driver">Initialized RemoteWebDriver instance</param>
-        /// <param name="Link Name">Link Name</param>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
+        /// <param name="menuname"></param>
         public static void ClickCorporateLink(RemoteWebDriver driver, Iteration reporter, string menuname)
         {
 
@@ -35,10 +36,10 @@ namespace NationalVision.Automation.Pages
         }
 
         /// <summary>
-        /// Select Sub links in Corporate
+        /// ClickCorporateSubLink selects sub links in Corporate
         /// </summary>
-        /// <param name="Driver">Initialized RemoteWebDriver instance</param>
-        /// <param name="Link Name">Link Name</param>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
         public static void ClickCorporateSubLink(RemoteWebDriver driver, Iteration reporter, string submenuname)
         {
 
@@ -51,11 +52,11 @@ namespace NationalVision.Automation.Pages
         }
 
         /// <summary>
-        /// Enter details in Accounting Page
+        /// TypeAccountingDeatls enters details in Accounting Page
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
-        /// <param name="Cost Center Number">First Name</param>
+        /// <param name="costcenternumber">First Name</param>
         public static void TypeAccountingDeatls(RemoteWebDriver driver, Iteration reporter,
             string costcenternumber)
         {
@@ -65,7 +66,7 @@ namespace NationalVision.Automation.Pages
         }
 
         /// <summary>
-        /// Perform Search Operation
+        /// ClickSearch performs Search Operation
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
@@ -76,10 +77,11 @@ namespace NationalVision.Automation.Pages
         }
 
         /// <summary>
-        /// VerifyCCNumber method verifies the CC Number in Search Results Page
+        /// VerifyCostCenterNumber method verifies the CC Number in Search Results Page
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
+        /// <param name="costcenternumber"></param>
         public static void VerifyCostCenterNumber(RemoteWebDriver driver, Iteration reporter, string costcenternumber)
         {
 
@@ -90,10 +92,11 @@ namespace NationalVision.Automation.Pages
         }
 
         /// <summary>
-        /// Perform Search Operation
+        /// ClickCostCenterAndVerify performs Search Operation
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
+        /// <param name="costcenternumber"></param>
         public static void ClickCostCenterAndVerify(RemoteWebDriver driver, Iteration reporter,string costcenternumber)
         {
             reporter.Add(new Act("Click on Search button"));
@@ -112,21 +115,10 @@ namespace NationalVision.Automation.Pages
             reporter.Add(new Act("Click on About National Vision Documents"));
             Selenide.SwitchToFrame(driver, Util.GetLocator("AboutNationalVisionFrame"));
             Selenide.JS.Click(driver, Util.GetLocator("NVDocument_lnk"));
-            Selenide.SwitchToWindow(driver);
-           // Selenide.WaitForElementVisible(driver, Util.GetLocator("VerifyAboutNVDocument_lnk"));
+            Selenide.SwitchToWindow(driver);          
             Selenide.VerifyVisible(driver, Util.GetLocator("VerifyAboutNVDocument_lnk"));
         }
-        
 
-        public static void VerifyCommunicationDocumentDownload(RemoteWebDriver driver, Iteration reporter)
-        {
-            reporter.Add(new Act("Verify Documents link in Communications Page"));
-            Selenide.SwitchToFrame(driver, Util.GetLocator("CommunicationFrame"));
-            reporter.Add(new Act("Click Document"));
-            Selenide.JS.Click(driver, Util.GetLocator("CommunicationDocument_lnk"));
-            Selenide.SwitchToWindow(driver);
-            reporter.Add(new Act("Verify Retail Calender Document"));      
-        }
 
         /// <summary>
         /// VerifyTabsInCostCenterPopUp verfies tabs in cost center popup
@@ -150,7 +142,7 @@ namespace NationalVision.Automation.Pages
         }
 
         /// <summary>
-        /// ClosePatientInformatioPoup method closes Patient Information Poup in Scheduler Page
+        /// CloseCostCenterPopUp method closes Patient Information Poup in Scheduler Page
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>

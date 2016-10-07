@@ -81,8 +81,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ScriptAttribute.cs" />
-    <Compile Include="BasePage.cs" />
     <Compile Include="BaseCase.cs" />
     <Compile Include="Locator.cs" />
     <Compile Include="Selenide.cs" />

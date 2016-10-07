@@ -1,0 +1,9 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU,STORENUMBER
+1,YES,Advanced Search,,Military Portal,Military Portal,Customer Info,WIP Tracking,Corporate,Advanced Search,5101
+2,YES,Store Services,,Military Portal,Military Portal,Customer Info,WIP Tracking,Stores,Store Services,5101
+3,YES,Canceled Jobs,,Military Portal,Military Portal,Customer Info,WIP Tracking,Stores,Canceled Jobs,5101
+4,YES,Jobs Search,,Military Portal,Military Portal,Customer Info,WIP Tracking,Stores,Jobs Search,5101
+5,YES,3 Days_Shipped,,Military Portal,Military Portal,Customer Info,WIP Tracking,Stores,3 Days: Shipped,5101
+6,YES,Today_Shipped,,Military Portal,Military Portal,Customer Info,WIP Tracking,Stores,Today: Shipped,5101
+7,YES,Today_Received,,Military Portal,Military Portal,Customer Info,WIP Tracking,Stores,Today: Received,5101
+8,YES,In-Process Jobs,,Military Portal,Military Portal,Customer Info,WIP Tracking,Stores,In-Process Jobs,5101

@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <PageFactory>
-
-  <page title ="Home Page">
-
+  
+  <page title ="Web Portal_Home Page">
     
-      
+    <object>
+      <name>ExternalApplication_lbl</name>
+      <identifyBy>id</identifyBy>
+      <value>spSiteTitle</value>
+    </object>
+
     <object>
       <name>Cancel_btn</name>
       <identifyBy>id</identifyBy>
@@ -19,7 +23,7 @@
     </object>
 
     <object>
-      <name>ApplicationLogo_Img</name>
+      <name>ApplicationLogo_img</name>
       <identifyBy>xpath</identifyBy>
       <value>//img[@title="Select Portal"]</value>
     </object>
@@ -55,7 +59,7 @@
     </object>
 
     <object>
-      <name>Portal_Logo</name>
+      <name>PortalLogo_img</name>
       <identifyBy>xpath</identifyBy>
       <value>//div[@id='updPanelMain']/descendant::img[@alt='Portal']</value>
     </object>
@@ -115,39 +119,9 @@
     </object>
 
     <object>
-      <name>AboutNationalVisionFrame</name>
-      <identifyBy>xpath</identifyBy>
-      <value>//td[@class='center']/div[@id='updPanelMenu']/following-sibling::iframe</value>
-    </object>
-
-    <object>
-      <name>NVDocument_lnk</name>
-      <identifyBy>xpath</identifyBy>
-      <value>//table[@class='NO_BORDERS wide100']/descendant::tbody/tr[2]/td[2]/a[@title='Open the document']</value>
-    </object>
-
-    <object>
-      <name>VerifyAboutNVDocument_lnk</name>
-      <identifyBy>xpath</identifyBy>
-      <value>//div[@id='bannerImage']/a/img</value>
-    </object>
-
-    <object>
       <name>CommunicationFrame</name>
       <identifyBy>xpath</identifyBy>
       <value>//table[@class='boxview']/descendant::td/descendant::iframe[@id='iFrameSiteContents']</value>
-    </object>
-
-    <object>
-      <name>CommunicationDocument_lnk</name>
-      <identifyBy>xpath</identifyBy>
-      <value>//div[@class='content_boxMain']/table/descendant::td/a</value>
-    </object>
-
-    <object>
-      <name>DoctorsMenu_lnk</name>
-      <identifyBy>xptah</identifyBy>
-      <value>//a[normalize-space(text())='Doctors']</value>
     </object>
 
     <object>
@@ -317,6 +291,7 @@
       <identifyBy>id</identifyBy>
       <value>txtCostCenter</value>
     </object>
-
+    
   </page>
+
 </PageFactory>

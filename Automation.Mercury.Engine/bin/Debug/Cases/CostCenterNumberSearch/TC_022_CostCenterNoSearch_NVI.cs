@@ -1,4 +1,4 @@
-﻿/* Description : TC_022_NVICorporateApplication_CostCenterNoSearch.cs is a test case  which opens the menu 
+﻿/* Description : TC_022_CostCenterNoSearch_NVI.cs is a test case  which opens the menu 
                  and searches with cost center number.
 
 Date :  26-Apr-2016
@@ -9,14 +9,14 @@ using Automation.Mercury;
 using System.Collections.Generic;
 using NationalVision.Automation.Pages;
 
-namespace NationalVision.Automation.Tests.Cases.StoreNumberSearch.TC_022_NVICorporateApplication_CostCenterNoSearch
+namespace NationalVision.Automation.Tests.Cases.StoreNumberSearch.TC_022_CostCenterNoSearch_NVI
 {
-    class TC_022_NVICorporateApplication_CostCenterNoSearch : BaseCase
+    class TC_022_CostCenterNoSearch_NVI : BaseCase
     {
-        List<string> menulist = CommonPage.GetColoumnValues("TC_022_NVICorporateApplication_CostCenterNoSearch", "Menu");
-        List<string> submenulist = CommonPage.GetColoumnValues("TC_022_NVICorporateApplication_CostCenterNoSearch", "SubMenu");
-        List<string> externalapplicationmenulist = CommonPage.GetColoumnValues("TC_022_NVICorporateApplication_CostCenterNoSearch", "ExternalApplicationMenu");
-        List<string> externalapplicationsubmenulist = CommonPage.GetColoumnValues("TC_022_NVICorporateApplication_CostCenterNoSearch", "ExternalApplicationSubMenu");
+        List<string> menulist = CommonPage.GetColoumnValues("TC_022_CostCenterNoSearch_NVI", "Menu");
+        List<string> submenulist = CommonPage.GetColoumnValues("TC_022_CostCenterNoSearch_NVI", "SubMenu");
+        List<string> externalapplicationmenulist = CommonPage.GetColoumnValues("TC_022_CostCenterNoSearch_NVI", "ExternalApplicationMenu");
+        List<string> externalapplicationsubmenulist = CommonPage.GetColoumnValues("TC_022_CostCenterNoSearch_NVI", "ExternalApplicationSubMenu");
         bool isTrueBool = true;
         protected override void ExecuteTestCase()
         {
@@ -39,16 +39,13 @@ namespace NationalVision.Automation.Tests.Cases.StoreNumberSearch.TC_022_NVICorp
                 try
                 {
                     Step = (i + 1) + ":" + " Click" + submenulist[i] + " in " + menulist[i] + " menu ";
-                    //AmericaBestHomePage.ClickOnMenu(Driver, Reporter, menulist[i]);
                     CommonPage.ClickSubMenuLink(Driver, Reporter, menulist[i], submenulist[i], i, resultsPath);
                     while (isTrueBool)
                     {
-                        if (AmericaBestHomePage.IsMenuAnExternalApplication(Driver, Reporter, submenulist[i]))
+                        if (CommonPage.IsMenuAnExternalApplication(Driver, Reporter, submenulist[i]))
                         {
-                            //Step = "Click " + externalapplicationmenulist[i] + " in " + submenulist[i] + " Menu";
-                            //AmericaBestHomePage.ClickExternalApplicationMenu(Driver, Reporter, externalapplicationmenulist[i],i);
                             Step = "Click " + externalapplicationsubmenulist[i] + " in " + externalapplicationmenulist[i] + " External Application Menu";
-                            AmericaBestHomePage.ClickExternalApplicationSubMenu(Driver, Reporter, externalapplicationmenulist[i], externalapplicationsubmenulist[i], i, resultsPath);
+                            CommonPage.ClickExternalApplicationSubMenu(Driver, Reporter, externalapplicationmenulist[i], externalapplicationsubmenulist[i], i, resultsPath);
                         }
                         if (i + 1 < submenulist.Count)
                         {
@@ -56,10 +53,9 @@ namespace NationalVision.Automation.Tests.Cases.StoreNumberSearch.TC_022_NVICorp
                         }
 
                         Step = "Enter Cost Center Number and Click on Search Button";
-                        StoreSchedulerPage.TypeCostCenterNumber(Driver, Reporter, TestData["COSTCENTERNUMBER"]);
-                        StoreSchedulerPage.ClickSearchButton(Driver, Reporter, resultsPath);
-                        ClickOnResults();
-                        Selenide.SwitchToDefaultContent(Driver);
+                        CommonPage.TypeCostCenterNumber(Driver, Reporter, TestData["COSTCENTERNUMBER"]);
+                        CommonPage.ClickSearchButton(Driver, Reporter, resultsPath);
+                        VerifyResults();
                         i++;
                     }
                     i--;
@@ -73,7 +69,7 @@ namespace NationalVision.Automation.Tests.Cases.StoreNumberSearch.TC_022_NVICorp
                 }
             }
         }
-        public void ClickOnResults()
+        public void VerifyResults()
         {
 
             if (Selenide.IsElementExists(Driver, Util.GetLocator("ResultsTable_frm")))
@@ -81,18 +77,11 @@ namespace NationalVision.Automation.Tests.Cases.StoreNumberSearch.TC_022_NVICorp
                 Selenide.SwitchToFrame(Driver, Util.GetLocator("ResultsTable_frm"));
                 if (Selenide.IsElementExists(Driver, Util.GetLocator("ResultsTable1_tbl")))
                 {
-                    Step = "Click on any store number";
-                    StoreSchedulerPage.ClickOnAnyStoreNumber(Driver, Reporter, resultsPath);
+                    Step = "Results Found";
                 }
                 else if (Selenide.IsElementExists(Driver, Util.GetLocator("ResultsTable2_tbl")))
                 {
-                    Step = "Click on any store number";
-                    StoreSchedulerPage.ClickOnAnyStoreNumber(Driver, Reporter, resultsPath);
-                }
-                if (Selenide.IsElementExists(Driver, Util.GetLocator("StoreInfoPopUp_win")))
-                {
-                    Step = "Close store popup window";
-                    StoreSchedulerPage.CloseStoreLocatorPopupWindow(Driver, Reporter, resultsPath);
+                    Step = "Results Found";
                 }
                 else
                 {

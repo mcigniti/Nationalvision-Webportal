@@ -1,0 +1,9 @@
+TDID,Run,TestCaseID,DefectID,APPLICATIONNAME,PAGETITLE,MENU,SUBMENU,EXTERNALAPPLICATIONMENU,EXTERNALAPPLICATIONSUBMENU,STORENUMBER
+1,YES,Advanced Search,,Fred Meyer Portal,Fred Meyer Portal,Customer Info,WIP Tracking,Corporate,Advanced Search,5101
+2,YES,Store Services,,Fred Meyer Portal,Fred Meyer Portal,Customer Info,WIP Tracking,Stores,Store Services,5101
+3,YES,Canceled Jobs,,Fred Meyer Portal,Fred Meyer Portal,Customer Info,WIP Tracking,Stores,Canceled Jobs,5101
+4,YES,Jobs Search,,Fred Meyer Portal,Fred Meyer Portal,Customer Info,WIP Tracking,Stores,Jobs Search,5101
+5,YES,3 Days_Shipped,,Fred Meyer Portal,Fred Meyer Portal,Customer Info,WIP Tracking,Stores,3 Days: Shipped,5101
+6,YES,Today_Shipped,,Fred Meyer Portal,Fred Meyer Portal,Customer Info,WIP Tracking,Stores,Today: Shipped,5101
+7,YES,Today_Received,,Fred Meyer Portal,Fred Meyer Portal,Customer Info,WIP Tracking,Stores,Today: Received,5101
+8,YES,In-Process Jobs,,Fred Meyer Portal,Fred Meyer Portal,Customer Info,WIP Tracking,Stores,In-Process Jobs,5101

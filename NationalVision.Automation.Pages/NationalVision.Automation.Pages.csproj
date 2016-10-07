@@ -69,15 +69,7 @@
     <Compile Include="CommonPage.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="AmericaBestHomePage.cs" />
-    <Compile Include="CorporatePage.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="LoginPage.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StoreSchedulerPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Automation.Mercury.Report\Automation.Mercury.Report.csproj">

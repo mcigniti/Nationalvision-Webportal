@@ -11,7 +11,8 @@ namespace NationalVision.Automation.Tests.Cases.ClickAllMenus.TC_001_ClickLinks_
     class TC_001_ClickLinks_NVI : BaseCase
     {
         List<string> menuNames = new List<string>();
-        int menuIndex, menuCount;
+        int menuCount;
+        int menuIndex;
         int intiterator = 1;
         protected override void ExecuteTestCase()
         {

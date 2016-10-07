@@ -165,7 +165,7 @@ namespace Automation.Mercury.Report
 	            <div class='container default'>
                     <div class='darkbg' style='background-color:#5d5d5d; color:#fff; min-height:100px; padding:20px; margin-bottom:5px; margin-top:5px; top:-40px;' bordercolor='#000000'>
 		                <div class='row'>		                  
-		                  <div class='col-md-6' > <b> Server: </b>{{SERVER}} <br/> <b> Browser: </b>{{BROWSER}}<br/> <b> Environment: </b>{{ENVIRONMENT}}</div>
+		                  <div class='col-md-6' > <b> Server: </b> <font color='white'>{{SERVER}} </font><br/> <b> Browser: </b>{{BROWSER}}<br/> <b> Environment: </b>{{ENVIRONMENT}}</div>
 		                  <div class='col-md-6' > <b> Start: </b>{{EXECUTION_BEGIN}}<br/> <b> End: </b>{{EXECUTION_END}}<br/><b> Duration: </b>{{EXECUTION_DURATION}}</div>		  
 		                </div>		
 	                </div>

@@ -159,6 +159,7 @@ namespace Automation.Mercury.Engine
                 request.Method = Method.POST;
                 IRestResponse response = client.Execute(request);
             }
+            System.Environment.Exit(0);
         }
 
         static void Processor(int maxDegree)

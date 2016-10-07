@@ -28,18 +28,15 @@ namespace NationalVision.Automation.Pages
 {
     public class CommonPage : BaseCase
     {
-        static bool IsExternalApplication = false, isSIMVisited = false, isAccountingVisited = false,
-            isContentManagementVisited = false, isWellnessVisited = false, isETLVisited = false,
-            isStoreSchedulerVisited = false, isPortalManagerVisited = false, isRedicallVisited = false,
-            isWIPVisited = false, isAssessmentsVisited = false;
-
+        static bool IsExternalApplication = false;
+        static List<string> externalAppNames = new List<string>();
 
         /// <summary>
-        /// This method naviagte the url
+        /// NavigateTo method naviagtes the url
         /// </summary>
-        /// <param name="driver">Initialized RemoteWebDriver instance</param>
-        /// <param name="reporter">Initialized report instance</param>
-        /// <param name="url">URL of the application</param>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
+        /// <param name="url"></param>
         public static void NavigateTo(RemoteWebDriver driver, Iteration reporter, String url)
         {
             Selenide.NavigateTo(driver, url);
@@ -48,8 +45,9 @@ namespace NationalVision.Automation.Pages
         /// <summary>
         /// SelectApplication method selects the application at login screen
         /// </summary>
-        /// <param name="Driver">Initialized RemoteWebDriver instance</param>
-        /// <param name="applicationName">application Name</param>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
+        /// <param name="applicationName"></param>
         public static void SelectApplication(RemoteWebDriver driver, Iteration reporter, string applicationName)
         {
             reporter.Add(new Act(String.Format("Select the {0} link ", applicationName)));
@@ -58,8 +56,6 @@ namespace NationalVision.Automation.Pages
             {
                 Actions action = new Actions(driver);
                 IWebElement application = Selenide.GetElement(driver, Locator.Get(LocatorType.XPath, string.Format(@"//table[@id='tblSelect']/descendant::a[contains(@title,""{0}"")]/div", applicationName)));
-                //Selenide.Click(driver,Locator.Get(LocatorType.XPath, string.Format(@"//table[@id='tblSelect']/descendant::a[contains(@title,""{0}"")]/div", applicationName)));
-                //Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//table[@id='tblSelect']/descendant::a[contains(@title,'{0}')]/div", applicationName)));
                 action.MoveToElement(application).Click().Build().Perform();
                 WaitForPageLoad(driver, 10);
                 Selenide.WaitForElementNotVisible(driver, Locator.Get(LocatorType.ClassName, "dlg_spinner"));
@@ -72,17 +68,30 @@ namespace NationalVision.Automation.Pages
         }
 
         /// <summary>
+        /// IsMenuAnExternalApplication clicks the submenu link
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
+        /// <param name="submenuname"></param>
+        /// <returns>bool</returns>
+        public static bool IsMenuAnExternalApplication(RemoteWebDriver driver, Iteration reporter, string submenuname)
+        {
+            return Selenide.IsElementExists(driver, Util.GetLocator("ExternalApplication_menu"));
+        }
+
+        /// <summary>
         /// SwitchApplication method switches the application at login screen
         /// </summary>
-        /// <param name="Driver">Initialized RemoteWebDriver instance</param>
-        /// <param name="applicationName">application Name</param>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
+        /// <param name="applicationName"></param>
         public static void SwitchApplication(RemoteWebDriver driver, Iteration reporter, string applicationName)
         {
             reporter.Add(new Act(String.Format("Double click on the logo")));
             Selenide.SwitchToDefaultContent(driver);
             try
             {
-                Selenide.DoubleClick(driver, Util.GetLocator("ApplicationLogo_Img"));
+                Selenide.DoubleClick(driver, Util.GetLocator("ApplicationLogo_img"));
             }
             catch (Exception ex)
             {
@@ -92,40 +101,16 @@ namespace NationalVision.Automation.Pages
 
 
         /// <summary>
-        /// VerifyPortalLogo verifies portal logo availability at home page
-        /// </summary>
-        /// <param name="Driver">Initialized RemoteWebDriver instance</param>
-        /// <param name="reporter">Initialized report instance</param>
-        public static void VerifyPortalLogo(RemoteWebDriver driver, Iteration reporter, string screenshotName, string saveTo)
-        {
-            Selenide.VerifyVisible(driver, Util.GetLocator("Portal_Logo"));
-            //takeScreenshot(driver, screenshotName, saveTo, reporter);
-        }
-
-        /// <summary>
-        /// RefreshBrowser method for Refreshs The Browser
-        /// </summary>
-        /// <param name="Driver">Initialized RemoteWebDriver instance</param>
-        /// <param name="reporter">Initialized report instance</param>
-        /// <param name="location">Location to navigate</param>
-        public static void RefreshBrowser(RemoteWebDriver driver, Iteration reporter)
-        {
-            Selenide.BrowserRefresh(driver);
-        }
-
-        /// <summary>
         /// WaitForPageLoad method holds the driver  until it loads
         /// </summary>
         /// <param name="driver"></param>
-        /// <param name="reporter"></param>
-        /// <param name="pageTitle"></param>
+        /// <param name="seconds"></param>
         public static void WaitForPageLoad(RemoteWebDriver driver, int seconds = 0)
         {
             string state = string.Empty;
             try
             {
 
-                //int time = driver, GetWaiter(driver, seconds);
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(seconds > 0 ? seconds : Convert.ToInt32(ConfigurationManager.AppSettings.Get("ElementSyncTimeOut"))));
 
                 //Checks every 500 ms whether predicate returns true if returns exit otherwise keep trying till it returns ture
@@ -175,39 +160,24 @@ namespace NationalVision.Automation.Pages
         }
 
         /// <summary>
-        /// ClickExternalApplicationMenu clicks on the menu in the external application menu
-        /// </summary>
-        /// <param name="Driver">Initialized RemoteWebDriver instance</param>
-        /// <param name="reporter"></param>
-        /// <param name="extMenuName">menu Name</param>
-        public static void ClickExternalApplicationMenu(RemoteWebDriver driver, Iteration reporter, string extMenuName, int i, string resultsPath)
-        {
-            reporter.Add(new Act(String.Format((i + 1) + ": Click on {0} menu in external application", extMenuName)));
-            Selenide.WaitForElementVisible(driver, Locator.Get(LocatorType.XPath,
-             string.Format(@"//div[@class='secmenu']/ul/li/a[contains(text(),""{0}"")]", extMenuName)));
-            Selenide.Click(driver, Locator.Get(LocatorType.XPath,
-             string.Format(@"//div[@class='secmenu']/ul/li/a[contains(text(),""{0}"")]", extMenuName)));
-            Selenide.WaitForElementNotVisible(driver, Locator.Get(LocatorType.ID, "dlg_spinner"));
-            AcceptOrDissmissAlertIfPresent(driver, reporter);
-            AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
-        }
-
-        /// <summary>
         /// ClickExternalApplicationSubMenu clicks on the menu in the external application submenu
         /// </summary>
-        /// <param name="Driver">Initialized RemoteWebDriver instance</param>
+        /// <param name="driver"></param>
         /// <param name="reporter"></param>
-        /// <param name="extSubMenuName">menu Name</param>
+        /// <param name="extMenuName"></param>
+        /// <param name="extSubMenuName"></param>
+        /// <param name="i"></param>
+        /// <param name="resultsPath"></param>
         public static void ClickExternalApplicationSubMenu(RemoteWebDriver driver, Iteration reporter, string extMenuName, string extSubMenuName, int i, string resultsPath)
         {
             int count = 0;
             try
             {
-                reporter.Add(new Act(String.Format((i + 1) + ": Click the following ext application menu: <b>{0}</b>>><b>{1}</b>", extMenuName, extSubMenuName)));
+                //reporter.Add(new Act(String.Format((i + 1) + ": Click the following ext application menu: <i>{0}</i>>><i>{1}</i>", extMenuName, extSubMenuName)));
 
                 //Mandatory step:
                 count = 0;
-                while (count < 3)
+                while (count < 2)
                 {
                     //Click on external menu
                     if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, string.Format(@"//div[@class='secmenu']/ul/li/a[contains(text(),""{0}"")]", extMenuName))))
@@ -249,11 +219,16 @@ namespace NationalVision.Automation.Pages
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
+        /// <param name="resultsPath"></param>
         public static void ClickSearchButton(RemoteWebDriver driver, Iteration reporter, string resultsPath)
         {
-            reporter.Add(new Act("Click on search button in Stores Directory Page"));
+            reporter.Add(new Act("Click on search button"));
             try
             {
+                Selenide.SwitchToFrame(driver, Locator.Get(LocatorType.Name, "iFrameSiteContents"));
+                Selenide.Click(driver, Locator.Get(LocatorType.XPath, "//div[@id='divSearchFields']//input"));
+                Selenide.SwitchToDefaultContent(driver);
+
                 Actions action = new Actions(driver);
                 action.SendKeys(OpenQA.Selenium.Keys.Enter).Build().Perform();
                 AcceptOrDissmissAlertIfPresent(driver, reporter);
@@ -272,37 +247,68 @@ namespace NationalVision.Automation.Pages
                 AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
             }
         }
-        public static void ClickSubMenuLink(RemoteWebDriver driver, Iteration reporter,
-            string menuName, string submenuname, int i, string resultsPath)
-        {
-            Selenide.SwitchToDefaultContent(driver);
-
-            reporter.Add(new Act(String.Format((i + 1) + ": Click the {0} submenu under {1} menu", submenuname, menuName)));
-            Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a[normalize-space(text())='{0}']", menuName)));
-            //Selenide.Focus(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a[normalize-space(text())='{0}']", submenuname)));
-            if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a[normalize-space(text())='{0}']", submenuname))))
-            {
-                Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a[normalize-space(text())='{0}']", submenuname)));
-                Selenide.WaitForElementNotVisible(driver, Locator.Get(LocatorType.ClassName, "dlg_spinner"));
-            }
-            else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a/nobr[normalize-space(text())='{0}']", submenuname))))
-            {
-                Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a/nobr[normalize-space(text())='{0}']", submenuname)));
-            }
-            //WaitUntilSpinnerDisappears(driver);
-            //WaitForPageLoad(driver,10);
-            AcceptOrDissmissAlertIfPresent(driver, reporter);
-            AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
-            CloseBrowserNewTab(driver);
-            FocusOnContent(driver, reporter);
-        }
 
         /// <summary>
-        /// AssertPageTitle verify page title macth
+        /// ClickSubMenuLink method clicks submenu's
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
-        /// <param name="pageTitle"></param>
+        /// <param name="menuName"></param>
+        /// <param name="submenuname"></param>
+        /// <param name="i"></param>
+        /// <param name="resultsPath"></param>
+        public static void ClickSubMenuLink(RemoteWebDriver driver, Iteration reporter,
+            string menuName, string submenuname, int i, string resultsPath)
+        {
+            try
+            {
+                Selenide.SwitchToDefaultContent(driver);
+
+                //reporter.Add(new Act(String.Format((i + 1) + ": Click the following navigtaion:<i> {0} >> {1} </i>", menuName,submenuname)));
+
+                //Clicks menu
+                Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a[normalize-space(text())='{0}']", menuName)));
+
+                //Checks if submenu is available
+                if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a[normalize-space(text())='{0}']", submenuname))))
+                {
+                    //Clicks submenu 
+                    Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a[normalize-space(text())='{0}']", submenuname)));
+                }
+
+                //Checks if submenu is available
+                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a/nobr[normalize-space(text())='{0}']", submenuname))))
+                {
+                    //Clicks submenu 
+                    Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a/nobr[normalize-space(text())='{0}']", submenuname)));
+                }
+
+                //Waits until spinner dissappears
+                Selenide.WaitForElementNotVisible(driver, Locator.Get(LocatorType.ClassName, "dlg_spinner"));
+                //Accepts or dismisses if any alert came
+                AcceptOrDissmissAlertIfPresent(driver, reporter);
+                //Closes if any error popup comes
+                AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
+                FocusOnContent(driver, reporter);
+            }
+            catch (Exception)
+            {
+                AcceptOrDissmissAlertIfPresent(driver, reporter);
+                //Closes if any error popup comes
+                AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
+                //Closes newly opened tab of the browser
+                CloseBrowserNewTab(driver);
+                //Focuses on the content
+                FocusOnContent(driver, reporter);
+            }
+        }
+
+        /// <summary>
+        /// AssertPageTitle method verifies page title macth
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
+        /// <param name="pTitle"></param>
         public static void AssertPageTitle(RemoteWebDriver driver, Iteration reporter, string pTitle = "")
         {
             reporter.Add(new Act("Waiting for page title"));
@@ -322,23 +328,12 @@ namespace NationalVision.Automation.Pages
         }
 
         /// <summary>
-        /// ClickHomePageTabs method click on Home Page tabs
+        /// Performs login
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
-        /// <param name="tabName">Tab Name where User wish to switch</param>
-        public static void ClickHomePageTabs(RemoteWebDriver driver, Iteration reporter, string tabName)
-        {
-            reporter.Add(new Act("Click on Home Page Tab: " + tabName));
-            Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//ul/descendant::a[normalize-space()='{0}']", tabName)));
-        }
-
-        /// <summary>
-        /// Performs login
-        /// </summary>
-        /// <param name="Driver">Initialized RemoteWebDriver instance</param>
-        /// <param name="username">Login Username</param>
-        /// <param name="password">Login Password</param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
         public static void Login(RemoteWebDriver driver, Iteration reporter, string username, string password)
         {
             try
@@ -361,39 +356,6 @@ namespace NationalVision.Automation.Pages
 
         }
 
-        /// <summary>
-        /// TypeSearchText method type search key words in Search text box
-        /// </summary>
-        /// <param name="driver"></param>
-        /// <param name="reporter"></param>
-        /// <param name="searchKey">Keywords wish to search</param>
-        public static void TypeSearchText(RemoteWebDriver driver, Iteration reporter, String searchKey)
-        {
-            reporter.Add(new Act(String.Format("Type '{0}' search keyword(s)/ character(s)  at Search Text box", searchKey)));
-            Selenide.SetText(driver, Util.GetLocator("search_txt"), Selenide.ControlType.Textbox, searchKey);
-        }
-
-        /// <summary>
-        /// ClearSearchText method clear text box
-        /// </summary>
-        /// <param name="driver"></param>
-        /// <param name="reporter"></param>
-        public static void ClearSearchText(RemoteWebDriver driver, Iteration reporter)
-        {
-            Selenide.Clear(driver, Util.GetLocator("search_txt"), Selenide.ControlType.Textbox);
-        }
-
-        /// <summary>
-        /// WaitLoadingComplete method load until spinner disappers
-        /// Use for EyeGlassesshelfpage, MyaccountPage for loading
-        /// This method wait until spinner disappers, default time 30sec
-        /// Spinner appears in Ajax calls also.
-        /// </summary>
-        /// <param name="driver"></param>
-        public static void WaitLoadingComplete(RemoteWebDriver driver)
-        {
-            Selenide.WaitForAjax(driver);
-        }
 
         /// <summary>
         /// WaitUntilSpinnerDisappears method waits until spinner disappers  
@@ -411,7 +373,9 @@ namespace NationalVision.Automation.Pages
         /// Customize naming convertion for screenshot
         /// </summary>
         /// <param name="driver"></param>
-        /// <param name="resultsPath">results path, this value capture forom BaseCase.cs file</param>
+        /// <param name="link"></param>
+        /// <param name="resultsPath"></param>
+        /// <param name="reporter"></param>
         public static void takeScreenshot(RemoteWebDriver driver, string link, string resultsPath, Iteration reporter)
         {
             Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
@@ -421,7 +385,7 @@ namespace NationalVision.Automation.Pages
             ss.ToString();
             reporter.Add(new Act("Click on the " + link + " PDF <a href='" + Path.Combine("Screenshots",
             String.Format("{0}.png", link)) + "'><span class='glyphicon glyphicon-paperclip normal'></span></a>&nbsp;"));
-            //reporter.Add(new Act("<span class='glyphicon glyphicon-remove green'></span>"));          
+
         }
 
         public static void TakeScreenShotAndAttachToReport(RemoteWebDriver driver, string link, string resultsPath, Iteration reporter)
@@ -433,14 +397,13 @@ namespace NationalVision.Automation.Pages
             link, DateTime.Now.ToString("hhmmssfff"))), ImageFormat.Png);
             ss.ToString();
             reporter.Add(new Act(" " + link + "<a href='" + Path.Combine("Screenshots", String.Format("{0}.png", link)) + "'><span class='glyphicon glyphicon-paperclip normal' align='right'></span></a>"));
-            //reporter.Add(new Act("<span class='glyphicon glyphicon-remove green'></span>"));  
+
         }
 
         /// <summary>
         /// WaitUntilSpinnerDisappears method waits until spinner disappers.
         /// </summary>
         /// <param name="driver"></param>
-        /// <param name="reporter"></param>
         public static void WaitUntilSpinnerDisappears(RemoteWebDriver driver)
         {
             WaitUntilSpinnerDisappears(driver, (Util.GetLocator("Spinner1_img")).ToString());
@@ -457,20 +420,18 @@ namespace NationalVision.Automation.Pages
             if (handles.Count > 1)
             {
                 driver.SwitchTo().Window(handles[1]);
-                //string parentWindow3 = driver.CurrentWindowHandle;
                 driver.Close();
                 driver.SwitchTo().Window(handles[0]);
             }
         }
 
         /// <summary>
-        /// AcceptOrDissmissAlertIfPresent method Accepts/dismiss alert if present.
+        /// AcceptOrDissmissAlertIfPresent method Accepts/dismisses alert if present.
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
         public static void AcceptOrDissmissAlertIfPresent(RemoteWebDriver driver, Iteration reporter)
         {
-            //reporter.Add(new Act(string.Format(@"Accepts if alert present")));
             if (Selenide.IsAlertPresent(driver))
             {
                 Selenide.AcceptorDismissAlert(driver);
@@ -482,8 +443,7 @@ namespace NationalVision.Automation.Pages
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
-        /// <param name="postion">Position of the link </param>
-        /// <returns></returns>
+        /// <param name="resultsPath"></param>
         public static void AcceptErrorMessageIfPresent(RemoteWebDriver driver, Iteration reporter, string resultsPath)
         {
 
@@ -498,27 +458,15 @@ namespace NationalVision.Automation.Pages
         }
 
         /// <summary>
-        /// ReturnTabName returns the tabname
+        /// GetMenuCount method returns menu count  
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
-        /// <param name="postion">Position of the link </param>
-        /// <returns></returns>
-        public static void ReturnTabName(RemoteWebDriver driver, int indexfromClickMethod)
-        {
-        }
-
-        /// <summary>
-        /// GetMenuCount returns menu count  
-        /// </summary>
-        /// <param name="driver"></param>
-        /// <param name="reporter"></param>
-        /// <param name="postion">Position of the link </param>
+        /// <param name="Application"></param>
         /// <returns></returns>
         public static int GetMenuCount(RemoteWebDriver driver, Iteration reporter,
             string Application)
         {
-            //Step = "Get the menu count of "+ Application +" ";
             reporter.Add(new Act(string.Format(@"Get the menu count in {0}", Application)));
             return Selenide.GetElementCount(driver, (Util.GetLocator("MenuGrid_lbl")));
         }
@@ -528,39 +476,43 @@ namespace NationalVision.Automation.Pages
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
-        /// <param name="postion">Position of the link </param>
-        /// <returns></returns>
+        /// <param name="menuIndex"></param>
+        /// <param name="menucount"></param>
+        /// <returns = "menuNames"></returns>
         public static List<string> GetMenuNames(RemoteWebDriver driver, Iteration reporter,
             int menuIndex, int menucount)
         {
             List<string> menuNames = new List<string>();
 
-            for (menuIndex = 1; menuIndex <= menucount; menuIndex++)
-            {//reporter.Add(new Act(string.Format(@"Gets the menu names")));
-                menuNames.Add(Selenide.GetText(driver, Locator.Get(LocatorType.XPath,
+            if (menucount > 0)
+            {
+                for (menuIndex = 1; menuIndex <= menucount; menuIndex++)
+                {
+                    menuNames.Add(Selenide.GetText(driver, Locator.Get(LocatorType.XPath,
                     string.Format(@"//div[@class='menu']/ul/li[{0}]", menuIndex)), Selenide.ControlType.Label));
+                }
             }
             return menuNames;
         }
 
+
         /// <summary>
-        /// ClickAllSubMenusInMenu method click the links in each menu of WebPortal
+        /// ClickAllSubMenusInMenu method clicks the links in each menu of WebPortal
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
-        /// <param name="tabName">tabName</param>
-        /// <param name="resultsPath">resultsPath</param>
-        /// 
+        /// <param name="resultsPath"></param>
+        /// <param name="menuItem"></param>
+        /// <param name="menuNames"></param>
         public static void ClickAllSubMenusInEachMenu(RemoteWebDriver driver, Iteration reporter, string resultsPath, string menuItem, List<string> menuNames)
         {
-            string subMenu = string.Empty, subMenuAttribute = string.Empty;
+            string subMenu = string.Empty, subMenuAttribute = string.Empty, sublinkname= string.Empty;
             int linksCountInEachMenu, linksCountInSubMenu, subMenuCount, subMenuCountInEachMenu, clickableLinksInEachMenu, linksCountInSubMenu1 = 0;
 
             //Clicks menu
             Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//div[@class='menu']/ul/li/a[contains(text(),'{0}')]", menuItem)));
 
             //Number of submenu's in a menu
-            //subMenuCountInEachMenu = Selenide.GetElementCount(driver, Locator.Get(LocatorType.XPath,string.Format(@"//div[@class='menu']/ul/li/a[contains(text(),'{0}')]/following-sibling::ul/li", menu)));
             subMenuCountInEachMenu = Selenide.GetElementCount(driver, Locator.Get(LocatorType.XPath, string.Format
                 (@"//div[@class='menu']/ul/li/a[normalize-space(text())='{0}']/following-sibling::ul/li", menuItem)));
 
@@ -582,7 +534,7 @@ namespace NationalVision.Automation.Pages
                 try
                 {
 
-                    #region Method0_Decides_ClickableLink(Ex:AboutNationalVision)orNot(Ex:SupplyOrdering)
+                    #region Method1_Decides_ClickableLink(Ex:AboutNationalVision)orNot(Ex:SupplyOrdering)
                     //The below step decides whether a SubMenu1 has SubMenu2 or Not: 
                     // if subMenuAttribute has non-null value then it contains further more submenus's under it(Ex: Supply Ordering), 
                     // else it is direct clickable link (Ex: About National Vision)
@@ -591,7 +543,7 @@ namespace NationalVision.Automation.Pages
 
                     #endregion
 
-                    #region Method1_NoSubMenus
+                    #region Method2_NoSubMenus
 
                     if (subMenuAttribute != null)
                     {
@@ -632,7 +584,7 @@ namespace NationalVision.Automation.Pages
                     }
                     #endregion
 
-                    #region Method2_MoreSubMenus(Sub-SubMenu)
+                    #region Method3_MoreSubMenus(Sub-SubMenu)
 
                     if (subMenuAttribute == null)
                     {
@@ -670,7 +622,7 @@ namespace NationalVision.Automation.Pages
                             Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format
                                 (@"//div[@class='menu']/ul/li/a[contains(text(),'{0}')]/following-sibling::ul/li[{1}]/a", menuItem, subMenuCount)));
 
-                            string sublinkname = Selenide.GetText(driver, Locator.Get(LocatorType.XPath, string.Format
+                            sublinkname = Selenide.GetText(driver, Locator.Get(LocatorType.XPath, string.Format
                                 (@"//div[@class='menu']/ul/li/a[contains(text(),'{0}')]/following-sibling::ul/li[{1}]/ul/li[{2}]/a", menuItem, subMenuCount, eachSubLink)), Selenide.ControlType.Label);
 
                             reporter.Add(new Act(String.Format
@@ -684,39 +636,38 @@ namespace NationalVision.Automation.Pages
                             AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
 
                             Selenide.WaitForElementNotVisible(driver, Locator.Get(LocatorType.ClassName, "dlg_spinner"));
-                            //Selenide.WaitForElementNotVisible(driver, Util.GetLocator("Spinner1_img"));
-                            //Selenide.WaitForElementNotVisible(driver, Util.GetLocator("Spinner2_img"));
 
                             WaitUntilSpinnerDisappears(driver);
                             if (Selenide.IsElementExists(driver, Util.GetLocator("Spinner1_img")) ||
                                 Selenide.IsElementExists(driver, Util.GetLocator("Spinner2_img")))
                             { Thread.Sleep(5000); }
                             CloseBrowserNewTab(driver);
+
                             ClickExternalApplicationMenus(driver, reporter, resultsPath);
+
                         }
                     }
                     #endregion
-
                 }
-
-
                 catch (Exception Ex)
                 {
                     AcceptOrDissmissAlertIfPresent(driver, reporter);
                     Selenide.WaitForElementNotVisible(driver, Locator.Get(LocatorType.ClassName, "dlg_spinner"));
                     Selenide.WaitForElementNotVisible(driver, Util.GetLocator("Spinner1_img"));
-                    //Selenide.WaitForElementNotVisible(driver, Util.GetLocator("Spinner2_img"));
                     AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
-                }
+                    reporter.Add(new Act(string.Format 
+                            (@"Error found in application menu link: <b>{0}</b>", Ex.Message)));
 
+                    TakeScreenShotAndAttachToReport(driver, sublinkname, resultsPath, reporter);
+                }
             }
         }
 
         /// <summary>
         /// FocusOnContent method focuses in the content
         /// </summary>
-        /// <param name="TestcaseName">Testcasename(classname)</param>
-        /// <param name="valueundermenucoloumn">value under the menu coloumn</param>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
         public static void FocusOnContent(RemoteWebDriver driver, Iteration reporter)
         {
             if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//td[@class='left']")))
@@ -728,8 +679,9 @@ namespace NationalVision.Automation.Pages
         /// <summary>
         /// GetMenuColoumnValues method gets the all menu values mentioned in the testdata csv
         /// </summary>
-        /// <param name="TestcaseName">Testcasename(classname)</param>
-        /// <param name="valueundermenucoloumn">value under the menu coloumn</param>
+        /// <param name="TestCaseName"></param>
+        /// <param name="valueundermenucoloumn"></param>
+        /// <returns></returns>
         public static List<string> GetColoumnValues(string TestCaseName, string valueundermenucoloumn)
         {
             List<string> menulist = new List<string>();
@@ -779,6 +731,7 @@ namespace NationalVision.Automation.Pages
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
+        /// <param name="resultsPath"></param>
         public static void ClickExternalApplicationMenus(RemoteWebDriver driver, Iteration reporter, string resultsPath)
         {
             int ExternalMenuCount = 0, LinksCountInExternalMenu = 0;
@@ -790,112 +743,38 @@ namespace NationalVision.Automation.Pages
             string LinkTextInExternalMenu = string.Empty;
             string ExternalMenuText = string.Empty;
             string submenu1 = string.Empty;
+            string extAppName;
 
             //Checks for external application
             IsExternalApplication = Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//div[@class='secmenu']/ul/li/a"));
 
+            //Execution enters into this below loop if the menu is an external application
             if (IsExternalApplication)
             {
-                if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//span[@id='spSiteTitle' and text()='Accounting']")))
-                {
-                    if (!isAccountingVisited)
-                    {
-                        ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
-                        LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
-                        isAccountingVisited = true;
-                    }
-                }
-                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//span[@id='spSiteTitle' and text()='SIM']")))
-                {
-                    if (!isSIMVisited)
-                    {
-                        ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
-                        LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
-                        isSIMVisited = true;
-                    }
-                }
-                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//span[@id='spSiteTitle' and text()='Portal Manager']")))
-                {
-                    if (!isPortalManagerVisited)
-                    {
-                        ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
-                        LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
-                        isPortalManagerVisited = true;
-                    }
-                }
-                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//span[@id='spSiteTitle' and text()='Wellness']")))
-                {
-                    if (!isWellnessVisited)
-                    {
-                        ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
-                        LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
-                        isWellnessVisited = true;
-                    }
-                }
-                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//span[@id='spSiteTitle' and text()='Content Management']")))
-                {
-                    if (!isContentManagementVisited)
-                    {
-                        ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
-                        LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
-                        isContentManagementVisited = true;
-                    }
-                }
+                extAppName = Selenide.GetText(driver, Util.GetLocator("ExternalApplication_lbl"), Selenide.ControlType.Label);
 
-                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//span[@id='spSiteTitle' and text()='ETL']")))
+                if (!externalAppNames.Contains(extAppName))
                 {
-                    if (!isETLVisited)
-                    {
-                        ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
-                        LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
-                        isETLVisited = true;
-                    }
+                    ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
+                    LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
                 }
-
-                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//span[@id='spSiteTitle' and text()='Store Scheduler']")))
-                {
-                    if (!isStoreSchedulerVisited)
-                    {
-                        ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
-                        LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
-                        isStoreSchedulerVisited = true;
-                    }
-                }
-                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//span[@id='spSiteTitle' and text()='Redicall']")))
-                {
-                    if (!isRedicallVisited)
-                    {
-                        ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
-                        LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
-                        isRedicallVisited = true;
-                    }
-                }
-                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//span[@id='spSiteTitle' and text()='WIP']")))
-                {
-                    if (!isWIPVisited)
-                    {
-                        ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
-                        LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
-                        isWIPVisited = true;
-                    }
-                }
-                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//span[@id='spSiteTitle' and text()='Assessments']")))
-                {
-                    if (!isAssessmentsVisited)
-                    {
-                        ExternalApplicationResuable(driver, reporter, resultsPath, NumberOfExternalMenu, NumberOfSubmenuInExternalMenu,
-                        LinkTextInExternalMenu, ExternalMenuText, submenu1, ExternalMenuCount, LinksCountInExternalMenu);
-                        isAssessmentsVisited = true;
-                    }
-                }
+                externalAppNames.Add(extAppName);
             }
         }
 
         /// <summary>
-        /// ExternalApplicationResuable is method called in the above ClickExternalApplicationMenus method
+        /// ExternalApplicationResuable method clicks external applications
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
+        /// <param name="resultsPath"></param>
+        /// <param name="NumberOfMenusInExternalMenu"></param>
+        /// <param name="NumberOfSubmenuInExternalMenu"></param>
+        /// <param name="LinkTextInExternalMenu"></param>
+        /// <param name="ExternalMenuText"></param>
+        /// <param name="submenu1"></param>
+        /// <param name="ExternalMenuCount"></param>
+        /// <param name="LinksCountInExternalMenu"></param>
         public static void ExternalApplicationResuable(RemoteWebDriver driver, Iteration reporter, string resultsPath, int NumberOfMenusInExternalMenu, int NumberOfSubmenuInExternalMenu,
         string LinkTextInExternalMenu,
         string ExternalMenuText,
@@ -913,15 +792,9 @@ namespace NationalVision.Automation.Pages
                 //Clicks a menu in external application
                 Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//div[@class='secmenu']/ul/li[{0}]/a", ExternalMenuCount + 1)));
 
-                //Thread.Sleep(500);
-
                 //Gets the external menu text
                 ExternalMenuText = Selenide.GetText(driver, Locator.Get(LocatorType.XPath, string.Format
                     (@"//div[@class='secmenu']/ul/li[{0}]/a", ExternalMenuCount + 1)), Selenide.ControlType.Label);
-
-                //reporter.Add(new Act(string.Format(@"Click on <b>{0}</b> menu in the external application", ExternalMenuText)));
-
-                //Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//div[@class='secmenu']/ul/li[{0}]/a", ExternalMenuCount + 1)));
 
                 //Gets the sub menu's count in the external menu
                 NumberOfSubmenuInExternalMenu = Selenide.GetElementCount(driver, Locator.Get(LocatorType.XPath, string.Format
@@ -950,6 +823,8 @@ namespace NationalVision.Automation.Pages
 
                         Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format
                             (@"//div[@class='secmenu']/ul/li[{0}]/ul/li[{1}]/a", ExternalMenuCount + 1, LinksCountInExternalMenu)));
+                        AcceptOrDissmissAlertIfPresent(driver, reporter);
+                        AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
 
                         CloseBrowserNewTab(driver);
 
@@ -965,7 +840,7 @@ namespace NationalVision.Automation.Pages
                         Selenide.WaitForElementNotVisible(driver, Locator.Get(LocatorType.ClassName, "dlg_spinner"));
                         Selenide.WaitForElementNotVisible(driver, Util.GetLocator("Spinner1_img"));
                         reporter.Add(new Act(string.Format
-                            (@"Error found in external application menu link: <b>{0}</b>", LinkTextInExternalMenu)));
+                            (@"Error found in external application menu link: <b>{0}</b>", ex.Message)));
 
                         TakeScreenShotAndAttachToReport(driver, LinkTextInExternalMenu, resultsPath, reporter);
                     }
@@ -977,7 +852,7 @@ namespace NationalVision.Automation.Pages
 
 
         ///<summary>
-        /// VerifyPageHeading is method used to verify page heading
+        /// VerifyPageHeading method used to verify page heading
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
@@ -993,15 +868,20 @@ namespace NationalVision.Automation.Pages
             Selenide.SwitchToDefaultContent(driver);
         }
 
+
+
         ///<summary>
-        /// ClickAddNewButton is method used to click add new button
+        /// ClickAddNewButton method clicks add new button
         /// </summary>
         /// <param name="driver"></param>
         /// <param name="reporter"></param>
         public static void ClickAddNewButton(RemoteWebDriver driver, Iteration reporter)
         {
             Selenide.SwitchToFrame(driver, Locator.Get(LocatorType.ID, "iFrameSiteContents"));
-            Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a[@id='aAddNew1']")));
+            if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.ID, "aAddNew1")))
+            {
+                Selenide.Click(driver, Locator.Get(LocatorType.XPath, string.Format(@"//a[@id='aAddNew1']")));
+            }
             Selenide.SwitchToDefaultContent(driver);
             if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.ID, "dlg_title_search")))
             {
@@ -1014,6 +894,153 @@ namespace NationalVision.Automation.Pages
                 Selenide.Click(driver, Locator.Get(LocatorType.ID, "cmdCancel"));
             }
             Selenide.SwitchToDefaultContent(driver);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// ClickOnTabsInStoreInfoPopUpWindow clicks on each tab in the popup window
+        /// </summary>
+        /// <param name="Driver">Initialized RemoteWebDriver instance</param>
+        /// <param name="reporter"></param>
+        /// <param name="submenuname">Link Name</param>
+        public static void CloseStoreInformationPoupWindow(RemoteWebDriver driver, Iteration reporter)
+        {
+            reporter.Add(new Act("Close Store Information Popup window"));
+            Selenide.Click(driver, Locator.Get(LocatorType.XPath, "StoreInfoPopUpCloseBtn_btn"));
+        }
+
+        /// <summary>
+        /// EnterStoreNumber method enters store number in store number field
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
+        /// <param name="storeNumber">Store Number</param>
+        public static void TypeStoreNumber(RemoteWebDriver driver, Iteration reporter,
+            string storeNumber)
+        {
+            reporter.Add(new Act("Enter store number in store number field"));
+            Selenide.SwitchToFrame(driver, Locator.Get(LocatorType.ID, "iFrameSiteContents"));
+            if (storeNumber.Equals(""))
+            {
+                return;
+            }
+            else if (Selenide.IsElementExists(driver, Util.GetLocator("StoreNumber1_txt")))
+            {
+                Selenide.Clear(driver, Util.GetLocator("StoreNumber1_txt"), Selenide.ControlType.Textbox);
+                Selenide.SetText(driver, Util.GetLocator("StoreNumber1_txt"), Selenide.ControlType.Textbox, storeNumber);
+            }
+
+            //Selenide.SwitchToDefaultContent(driver);
+        }
+
+        /// <summary>
+        /// TypeCostCenterNumber method enters cost center number in cost center number field
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
+        /// <param name="costCenterNumber">Store Number</param>
+        public static void TypeCostCenterNumber(RemoteWebDriver driver, Iteration reporter,
+            string costCenterNumber)
+        {
+            reporter.Add(new Act("Enter cost center number in cost center number field"));
+            Selenide.SwitchToFrame(driver, Locator.Get(LocatorType.ID, "iFrameSiteContents"));
+            if (costCenterNumber.Equals(""))
+            {
+                return;
+            }
+            else if (Selenide.IsElementExists(driver, Util.GetLocator("CostCenterNumber1_txt")))
+            {
+                Selenide.Clear(driver, Util.GetLocator("CostCenterNumber1_txt"), Selenide.ControlType.Textbox);
+                Selenide.SetText(driver, Util.GetLocator("CostCenterNumber1_txt"), Selenide.ControlType.Textbox, costCenterNumber);
+            }
+
+            //Selenide.SwitchToDefaultContent(driver);
+        }
+
+        /// <summary>
+        /// ClickOnAnyStoreNumber method clicks on store number in the results
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
+        /// <param name="resultsPath"></param>
+        public static void ClickOnAnyStoreNumber(RemoteWebDriver driver, Iteration reporter, string resultsPath)
+        {
+            try
+            {
+                reporter.Add(new Act("Click on store number in results of Stores Directory Page"));
+                //Selenide.SwitchToFrame(driver, Locator.Get(LocatorType.ID, "iFrameSiteContents"));
+                if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//table[@class='formview']/descendant::tr[2]/td//a/nobr")))
+                {
+                    Selenide.Click(driver, Locator.Get(LocatorType.XPath, ("//table[@class='formview']/descendant::tr[2]/td//a/nobr")));
+                }
+                else if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.XPath, "//table[@class='formview']/descendant::tr[2]/td//a")))
+                {
+                    Selenide.Click(driver, Locator.Get(LocatorType.XPath, ("//table[@class='formview']/descendant::tr[2]/td//a")));
+                }
+                else
+                {
+                    reporter.Add(new Act("Results not found"));
+                }
+
+                Selenide.WaitForElementNotVisible(driver, Locator.Get(LocatorType.ClassName, "dlg_spinner"));
+                CommonPage.AcceptOrDissmissAlertIfPresent(driver, reporter);
+                CommonPage.AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
+                Selenide.SwitchToDefaultContent(driver);
+            }
+
+            catch (SystemException sysex)
+            {
+                CommonPage.AcceptOrDissmissAlertIfPresent(driver, reporter);
+                CommonPage.AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
+            }
+
+        }
+
+        /// <summary>
+        /// CloseStoreLocatorPopupWindow method clicks on close icon of doctors entry popup
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="reporter"></param>
+        /// <param name="resultsPath"></param>
+        public static void CloseStoreLocatorPopupWindow(RemoteWebDriver driver, Iteration reporter, string resultsPath)
+        {
+
+            try
+            {
+                reporter.Add(new Act("Close Store Locator Popup Window"));
+                Selenide.WaitForElementNotVisible(driver, Locator.Get(LocatorType.ClassName, "dlg_spinner"));
+                if (Selenide.IsElementExists(driver, Locator.Get(LocatorType.ID, "createmsgdiv")))
+                {
+                    CommonPage.AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
+                }
+                if (Selenide.IsElementExists(driver, Util.GetLocator("StoreInfoCloseBtn_win")))
+                {
+                    Selenide.Click(driver, Util.GetLocator("StoreInfoCloseBtn_win"));
+                }
+                Selenide.SwitchToDefaultContent(driver);
+            }
+            catch (Exception ex)
+            {
+                CommonPage.AcceptOrDissmissAlertIfPresent(driver, reporter);
+                CommonPage.AcceptErrorMessageIfPresent(driver, reporter, resultsPath);
+            }
         }
     }
 }

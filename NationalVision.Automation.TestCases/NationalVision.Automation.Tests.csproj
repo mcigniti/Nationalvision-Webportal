@@ -21,6 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+    <IntermediateOutputPath>C:\Users\E002034\AppData\Local\Temp\vs5712.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IntermediateOutputPath>C:\Users\E002034\AppData\Local\Temp\vs5712.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -75,7 +77,7 @@
     <Compile Include="Cases\ClickAddNewButton\TC_021_ClickAddNewButton_AmericaBest.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Cases\ClickAddNewButton\TC_020_ClickAddNewButton_Walmart.cs">
+    <Compile Include="Cases\ClickAddNewButton\TC_020_ClickAddNewButton_VisionCenter.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Cases\ClickAddNewButton\TC_019_ClickAddNewButton_EGW.cs">
@@ -99,16 +101,16 @@
     <Compile Include="Cases\StoreNumberSearch\TC_012_StoreNumberSearch_EGW.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Cases\StoreNumberSearch\TC_013_StoreNumberSearch__OpticalCenter.cs">
+    <Compile Include="Cases\StoreNumberSearch\TC_013_StoreNumberSearch_OpticalCenter.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Cases\StoreNumberSearch\TC_014_StoreNumberSearch_VistaApplication.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Cases\StoreNumberSearch\TC_015_VisionCenterOrWalmartApplication.cs">
+    <Compile Include="Cases\StoreNumberSearch\TC_015_StoreNumberSearch_VisionCenter.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Cases\StoreNumberSearch\TC_016_LABApplication.cs">
+    <Compile Include="Cases\StoreNumberSearch\TC_016_StoreNumberSearch_LABPortal.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Cases\ClickAllMenus\TC_002_ClickLinks_FirstSight.cs">
@@ -215,24 +217,23 @@
     <None Include="Data\StoreNumberSearch\TC_012_StoreNumberSearch_EGW.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Data\StoreNumberSearch\TC_013_StoreNumberSearch__OpticalCenter.csv">
+    <None Include="Data\StoreNumberSearch\TC_013_StoreNumberSearch_OpticalCenter.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Data\StoreNumberSearch\TC_014_FredMeyerApplicationOrVistaApplication.csv">
+    <None Include="Data\StoreNumberSearch\TC_014_StoreNumberSearch_VistaApplication.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Data\StoreNumberSearch\TC_015_VisionCenterOrWalmartApplication.csv">
+    <None Include="Data\StoreNumberSearch\TC_015_StoreNumberSearch_VisionCenter.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Data\StoreNumberSearch\TC_016_LABApplication.csv">
+    <None Include="Data\StoreNumberSearch\TC_016_StoreNumberSearch_LABPortal.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Data\Test_Common.csv">
+    <None Include="Data\Test_CommonDetails.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

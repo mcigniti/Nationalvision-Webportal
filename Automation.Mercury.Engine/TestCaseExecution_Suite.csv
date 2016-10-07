@@ -1,0 +1,14 @@
+TestCaseID,Run,Browser,RequirementFeature,TestCaseTitle,Remarks
+TC_001_ClickLinks_NVI,YES,FF,Links clicking in NVI Corporate Application,,None
+TC_002_ClickLinks_FirstSight,YES,FF,Links clicking in FirstSightCorporateApplication,,None
+TC_003_ClickLinks_AmericasBest,YES,FF,Links clicking in AmericasBestApplication,,None
+TC_004_ClickLinks_EGW,YES,FF,Links clicking in EyeglassWorldApplication,,None
+TC_005_ClickLinks_OpticalCenter,YES,FF,Links clicking in OpticalCenterOrMilitaryApplication,,None
+TC_006_ClickLinks_VistaOptical,YES,FF,Links clicking in FredMeyerApplicationOrVistaApplication,,None
+TC_007_ClickLinks_VisionCenter,YES,FF,Links clicking in Vision Center Or Walmart,,None
+TC_008_ClickLinks_LABPortal,YES,FF,Links clicking in LAB Application,,None
+TC_009_StoreNumberSearch_NVI,YES,FF,Store Search in NVI Portal,,None
+TC_010_StoreNumberSearch_FirstSight,YES,FF,Store Search inFirst Sight Corporate Portal,,None
+TC_017_ClickAddNewButton_NVI,YES,FF,Click Add New Button,,None
+TC_022_CostCenterNoSearch_NVI,YES,FF,Click Add New Button,,None
+TC_024_EmptySearch_NVI,YES,FF,Click Add New Button,,None

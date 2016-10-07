@@ -13,9 +13,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Xml;
-using System.Drawing;
-
-
 
 namespace Automation.Mercury
 {
@@ -82,7 +79,6 @@ namespace Automation.Mercury
             return tableTestData;
         }
 
-
         /// <summary>
         /// Gets all iteration related test data of specified test case
         /// </summary>
@@ -100,9 +96,8 @@ namespace Automation.Mercury
             if (foundFiles.Length == 0)
                 throw new FileNotFoundException(String.Format("Test Data file not found at {0}", location), String.Format("{0}.csv", testCaseId));
 
-            DataTable tableTestData = ReadFirstLineOfCSVContent("", foundFiles[0]);
+            DataTable tableTestData = ReadCSVContent("", foundFiles[0]);
            
-
             foreach( DataRow eachRow in tableTestData.Rows)
             {
                 foreach (DataColumn eachColumn in tableTestData.Columns)
@@ -307,6 +302,7 @@ namespace Automation.Mercury
                     else if (browserConfig["browser"] == "Chrome")
                     {
                         ChromeOptions options = new ChromeOptions();
+                        //options.AddArgument("no-sandbox");
                         options.AddArguments("chrome.switches", "--disable-extensions");
                         driver = new ChromeDriver(exePath,options);
                     }
@@ -348,46 +344,6 @@ namespace Automation.Mercury
                     driver = new RemoteWebDriver(new Uri("http://hub.browserstack.com/wd/hub/"), desiredCapabilities);
                     driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
                 }
-                //SmartBear Crossbrowser
-                else if (browserConfig["target"] == "SmartBear")
-                {
-                    DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-
-                    String[] bsCredentials = ConfigurationManager.AppSettings.Get("SmartBearCBTCredentials").Split(new Char[] { ':' });
-                    desiredCapabilities.SetCapability("username", bsCredentials[0].Trim());
-                    desiredCapabilities.SetCapability("password", bsCredentials[1].Trim());
-                    
-                    if (browserConfig["type"] == "Desktop")
-                    {
-                        String[] BrowserAtributes = ConfigurationManager.AppSettings.Get("SmartBearCBTCredentials").Split(new Char[] { ':' });
-                        desiredCapabilities.SetCapability("browser_api_name", "MblSafari8.0");
-                        desiredCapabilities.SetCapability("os_api_name", "iPhone6Plus-iOS8sim");
-                        desiredCapabilities.SetCapability("screen_resolution", "2208x1242");
-                        //desiredCapabilities.SetCapability("screen_resolution", "1024x768");
-                        //desiredCapabilities.SetCapability("record_video", "true");
-                    }
-                    else if (browserConfig["type"] == "Mobile")
-                    {
-                        desiredCapabilities.SetCapability("browser_api_name", browserConfig["browser"]);
-                        desiredCapabilities.SetCapability("os_api_name", browserConfig["os"]);
-                        desiredCapabilities.SetCapability("screen_resolution", browserConfig["screen_resolution"]);
-                        //desiredCapabilities.SetCapability("screen_resolution", "1024x768");
-                        //desiredCapabilities.SetCapability("record_video", "true");
-                    }
-                    desiredCapabilities.SetCapability("record_network", "true");
-                    desiredCapabilities.SetCapability("record_snapshot", "true");
-
-                    
-                    foreach (KeyValuePair<String, String> capability in browserConfig)
-                    {
-                        if (capability.Key != "target")
-                            desiredCapabilities.SetCapability(capability.Key, capability.Value);
-                    }
-
-                    driver = new RemoteWebDriver(new Uri("http://hub.crossbrowsertesting.com:80/wd/hub"), desiredCapabilities,TimeSpan.FromSeconds(10));
-                    //driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-                }
-
                 driver.Manage().Cookies.DeleteAllCookies();
             }
             catch (Exception ex)
@@ -396,7 +352,6 @@ namespace Automation.Mercury
                 // we should better handle the situation where RemoteWebDriver initiation fail,
                 // should not let entire execution halt
             }
-
             return driver;
         }
 
@@ -412,7 +367,5 @@ namespace Automation.Mercury
             int i = s.IndexOf(oldValue);
             return s.Remove(i, oldValue.Length).Insert(i, newValue);
         }
-
-
     }
 }

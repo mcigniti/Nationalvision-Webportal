@@ -43,21 +43,18 @@ namespace NationalVision.Automation.Tests.Cases.StoreNumberSearch.TC_009_StoreNu
                 try
                 {
                     Step = (i + 1) + ":" + " Click>>" + submenulist[i] + " in " + menulist[i] + " menu ";
-                    //AmericaBestHomePage.ClickOnMenu(Driver, Reporter, menulist[i]);
                     CommonPage.ClickSubMenuLink(Driver, Reporter, menulist[i], submenulist[i], i, resultsPath);
                     while (isTrueBool)
                     {
-                        if (AmericaBestHomePage.IsMenuAnExternalApplication(Driver, Reporter, submenulist[i]))
+                        if (CommonPage.IsMenuAnExternalApplication(Driver, Reporter, submenulist[i]))
                         {
-                            //Step = "Click " + externalapplicationmenulist[i] + " in " + submenulist[i] + " Menu";
-                            //AmericaBestHomePage.ClickExternalApplicationMenu(Driver, Reporter, externalapplicationmenulist[i],i);
                             Step = "Click " + externalapplicationsubmenulist[i] + " in " + externalapplicationmenulist[i] + " External Application Menu";
-                            AmericaBestHomePage.ClickExternalApplicationSubMenu(Driver, Reporter, externalapplicationmenulist[i], externalapplicationsubmenulist[i], i, resultsPath);
+                            CommonPage.ClickExternalApplicationSubMenu(Driver, Reporter, externalapplicationmenulist[i], externalapplicationsubmenulist[i], i, resultsPath);
                         }
                         Step = "Enter Store Number and Click on Search Button";
-                        StoreSchedulerPage.TypeStoreNumber(Driver, Reporter, TestData["STORENUMBER"]);
-                        StoreSchedulerPage.ClickSearchButton(Driver, Reporter, resultsPath);
-                        ClickOnResults();
+                        CommonPage.TypeStoreNumber(Driver, Reporter, TestData["STORENUMBER"]);
+                        CommonPage.ClickSearchButton(Driver, Reporter, resultsPath);
+                        VerifyResults();
                         Selenide.SwitchToDefaultContent(Driver);
                         if (submenulist.Count > i + 1)
                         {
@@ -80,7 +77,7 @@ namespace NationalVision.Automation.Tests.Cases.StoreNumberSearch.TC_009_StoreNu
                 }
             }
         }
-        public void ClickOnResults()
+        public void VerifyResults()
         {
 
             if (Selenide.IsElementExists(Driver, Util.GetLocator("ResultsTable_frm")))
@@ -88,18 +85,11 @@ namespace NationalVision.Automation.Tests.Cases.StoreNumberSearch.TC_009_StoreNu
                 Selenide.SwitchToFrame(Driver, Util.GetLocator("ResultsTable_frm"));
                 if (Selenide.IsElementExists(Driver, Util.GetLocator("ResultsTable1_tbl")))
                 {
-                    Step = "Click on any store number";
-                    StoreSchedulerPage.ClickOnAnyStoreNumber(Driver, Reporter, resultsPath);
+                    Step = "Results Found";
                 }
                 else if (Selenide.IsElementExists(Driver, Util.GetLocator("ResultsTable2_tbl")))
                 {
-                    Step = "Click on any store number";
-                    StoreSchedulerPage.ClickOnAnyStoreNumber(Driver, Reporter, resultsPath);
-                }
-                if (Selenide.IsElementExists(Driver, Util.GetLocator("StoreInfoPopUp_win")))
-                {
-                    Step = "Close store popup window";
-                    StoreSchedulerPage.CloseStoreLocatorPopupWindow(Driver, Reporter, resultsPath);
+                    Step = "Results Found";
                 }
                 else
                 {
